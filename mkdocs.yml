@@ -1,0 +1,64 @@
+site_name: EpiDBot User Manual
+site_description: Step-by-step user manual for EpidBot — AI-powered public health data analytics
+site_author: Kwar-AI EpidBot Team
+site_url: https://deeplearn-ped.github.io/epidbot-manual/
+
+repo_name: epidbot-manual
+repo_url: https://github.com/Deeplearn-PeD/epidbot-manual
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.top
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home (English): index.md
+  - Manual em Português: manual-pt.md
+
+extra:
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Português
+      link: manual-pt/
+      lang: pt-BR
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Deeplearn-PeD/epidbot-manual
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+
+plugins:
+  - search
+  - to-pdf:
+      enabled_if_env: ENABLE_PDF_EXPORT
+      author: "Kwar-AI EpidBot Team"
+      cover: true
+      output_path: "EpiDBot_User_Manual.pdf"
