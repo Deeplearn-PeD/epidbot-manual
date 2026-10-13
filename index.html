@@ -1,0 +1,5485 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Step-by-step user manual for EpidBot — AI-powered public health data analytics">
+      
+      
+        <meta name="author" content="Kwar-AI EpidBot Team">
+      
+      
+        <link rel="canonical" href="https://deeplearn.ltd/epidbot-manual/">
+      
+      
+      
+        <link rel="next" href="manual-pt/">
+      
+      
+        
+          <link rel="alternate" href="/" hreflang="en">
+        
+          <link rel="alternate" href="manual-pt/" hreflang="pt-BR">
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>EpiDBot User Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#epidbot-user-manual" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="EpiDBot User Manual" class="md-header__button md-logo" aria-label="EpiDBot User Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EpiDBot User Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home (English)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="manual-pt/" hreflang="pt-BR" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Deeplearn-PeD/epidbot-manual" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    epidbot-manual
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="EpiDBot User Manual" class="md-nav__button md-logo" aria-label="EpiDBot User Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EpiDBot User Manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Deeplearn-PeD/epidbot-manual" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    epidbot-manual
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home (English)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home (English)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welcome
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-epidbot-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Can EpiDBot Do?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating an Account
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging In
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-your-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing Your Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your First Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-explore-available-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Explore Available Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-download-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Download Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-analyze-and-visualize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Analyze and Visualize
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-chat-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Chat Interface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Chat Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sending-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sending Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streaming-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streaming Responses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupting-a-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interrupting a Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answering-clarifying-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Answering Clarifying Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avatars-and-sender-attribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avatars and Sender Attribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rich-content-in-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rich Content in Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copying Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unanswered-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unanswered Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quota-enforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quota Enforcement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-chat-as-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting Chat as PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brazilian-health-data-datasus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brazilian Health Data (DATASUS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mosqlimate-brazilian-climate-epidemiological-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mosqlimate (Brazilian Climate &amp; Epidemiological Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geographic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geographic Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-specialized-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More Specialized Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uploading Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browsing-and-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browsing and Searching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previewing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Previewing Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analyzing Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyzing Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statistical-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistical Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandbox-code-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sandbox Code Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actuarial-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actuarial Modeling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-browser-code-editor-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Browser Code Editor (IDE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In-Browser Code Editor (IDE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-the-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening the IDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-and-running-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing and Running Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving Snippets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizations-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizations &amp; Plots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizations &amp; Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chart-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chart Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with Plots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-queries_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Plots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-my-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing My Plots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browsing-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browsing Plots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightbox-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lightbox Preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Plots
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browsing-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browsing Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blipper-the-data-storytelling-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blipper — The Data Storytelling Feed
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blipper — The Data Storytelling Feed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sharing-content-to-blipper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Content to Blipper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Feed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-composer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post Composer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#malaria-atlas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Malaria Atlas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Malaria Atlas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-queries_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-a-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating a Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Downloading Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latex-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LaTeX Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scientific-manuscripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scientific Manuscripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-limits-for-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan Limits for Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sessions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session Cards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-session-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Session Restrictions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knowledge Base
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Knowledge Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-the-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching the Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Collections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiki-and-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiki and Knowledge Graph
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Password
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registering-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering an Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-external-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using External Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git Integrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zotero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zotero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-consultation-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan &amp; Consultation Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan &amp; Consultation Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-your-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading Your Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultation-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultation Packs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Language Preferences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newsletter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Newsletter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscription-plans-feature-gating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscription Plans &amp; Feature Gating
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscription Plans &amp; Feature Gating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plans-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plans Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-limits-by-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Limits by Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-gating-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Gating Matrix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Gating Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-includes-everything-in-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Max (includes everything in Pro)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-includes-everything-in-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team (includes everything in Max)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-gating-works-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Gating Works in Practice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expiry-grace-period-and-grandfathering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expiry, Grace Period, and Grandfathering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effective-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effective Prompting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mid-stream-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mid-stream Redirection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizing-work-with-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organizing Work with Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-language-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-language Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Languages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="manual-pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual em Português
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welcome
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-epidbot-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Can EpiDBot Do?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating an Account
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging In
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-your-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing Your Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your First Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-explore-available-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Explore Available Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-download-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Download Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-analyze-and-visualize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Analyze and Visualize
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-chat-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Chat Interface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Chat Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sending-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sending Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streaming-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streaming Responses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupting-a-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interrupting a Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answering-clarifying-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Answering Clarifying Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avatars-and-sender-attribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avatars and Sender Attribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rich-content-in-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rich Content in Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copying Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unanswered-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unanswered Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quota-enforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quota Enforcement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-chat-as-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting Chat as PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brazilian-health-data-datasus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brazilian Health Data (DATASUS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        International Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mosqlimate-brazilian-climate-epidemiological-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mosqlimate (Brazilian Climate &amp; Epidemiological Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geographic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geographic Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-specialized-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More Specialized Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uploading Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browsing-and-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browsing and Searching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previewing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Previewing Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analyzing Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyzing Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statistical-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistical Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandbox-code-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sandbox Code Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actuarial-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actuarial Modeling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-browser-code-editor-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Browser Code Editor (IDE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In-Browser Code Editor (IDE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-the-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening the IDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-and-running-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing and Running Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving Snippets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizations-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizations &amp; Plots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizations &amp; Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chart-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chart Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with Plots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-queries_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Plots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-my-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing My Plots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browsing-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browsing Plots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightbox-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lightbox Preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Plots
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browsing-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browsing Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blipper-the-data-storytelling-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blipper — The Data Storytelling Feed
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blipper — The Data Storytelling Feed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sharing-content-to-blipper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Content to Blipper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Feed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-composer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post Composer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#malaria-atlas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Malaria Atlas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Malaria Atlas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-queries_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-a-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating a Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Downloading Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latex-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LaTeX Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scientific-manuscripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scientific Manuscripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-limits-for-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan Limits for Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sessions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session Cards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-session-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Session Restrictions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knowledge Base
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Knowledge Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-the-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching the Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Collections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiki-and-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiki and Knowledge Graph
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Password
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registering-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering an Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-external-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using External Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git Integrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zotero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zotero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-consultation-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan &amp; Consultation Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan &amp; Consultation Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-your-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading Your Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultation-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultation Packs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Language Preferences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newsletter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Newsletter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscription-plans-feature-gating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscription Plans &amp; Feature Gating
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscription Plans &amp; Feature Gating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plans-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plans Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-limits-by-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Limits by Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-gating-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Gating Matrix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Gating Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-includes-everything-in-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Max (includes everything in Pro)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-includes-everything-in-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team (includes everything in Max)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-gating-works-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Gating Works in Practice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expiry-grace-period-and-grandfathering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expiry, Grace Period, and Grandfathering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effective-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effective Prompting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mid-stream-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mid-stream Redirection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizing-work-with-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organizing Work with Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-language-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-language Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Languages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="epidbot-user-manual">EpiDBot User Manual<a class="headerlink" href="#epidbot-user-manual" title="Permanent link">&para;</a></h1>
+<p><img alt="EpiDBot Logo" src="screenshots/epidbot-logo.png" /></p>
+<p><strong>AI-Powered Public Health Data Analytics</strong></p>
+<p>Version 2.8.0 | Kwar-AI</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#welcome">Welcome</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#your-first-analysis">Your First Analysis</a></li>
+<li><a href="#the-chat-interface">The Chat Interface</a></li>
+<li><a href="#data-sources">Data Sources</a></li>
+<li><a href="#my-data">My Data</a></li>
+<li><a href="#analyzing-data">Analyzing Data</a></li>
+<li><a href="#in-browser-code-editor-ide">In-Browser Code Editor (IDE)</a></li>
+<li><a href="#visualizations--plots">Visualizations &amp; Plots</a></li>
+<li><a href="#my-plots">My Plots</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#blipper">Blipper — The Data Storytelling Feed</a></li>
+<li><a href="#malaria-atlas">Malaria Atlas</a></li>
+<li><a href="#reports">Reports</a></li>
+<li><a href="#sessions">Sessions</a></li>
+<li><a href="#search">Search</a></li>
+<li><a href="#knowledge-base">Knowledge Base</a></li>
+<li><a href="#settings">Settings</a></li>
+<li><a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a></li>
+<li><a href="#tips--best-practices">Tips &amp; Best Practices</a></li>
+<li><a href="#supported-languages">Supported Languages</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#glossary">Glossary</a></li>
+</ol>
+<hr />
+<h2 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h2>
+<p>EpiDBot is an AI assistant that helps you explore, analyze, and visualize public health data from around the world. Whether you are studying disease trends in Brazil, comparing health indicators across countries, or generating reports for your research, EpiDBot puts powerful epidemiological tools at your fingertips through a simple conversational interface.</p>
+<h3 id="what-can-epidbot-do">What Can EpiDBot Do?<a class="headerlink" href="#what-can-epidbot-do" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Download and query</strong> public health datasets from Brazil (DATASUS, ANVISA), WHO, ECDC, World Bank, PAHO, and more</li>
+<li><strong>Run statistical analyses</strong> with temporal, spatial, and demographic breakdowns</li>
+<li><strong>Generate charts, maps, and plots</strong> automatically from your data — including mindmaps and choropleth maps with smart classification</li>
+<li><strong>Execute custom Python and SQL code</strong> in a secure sandbox environment</li>
+<li><strong>Create downloadable PDF reports</strong> with built-in templates (Outbreak, Risk Assessment, Scientific, etc.) and custom CSS themes</li>
+<li><strong>Upload your own datasets</strong> (CSV, Excel, GeoJSON, and more) for private analysis alongside public data</li>
+<li><strong>Upload your own report templates</strong> (Markdown + CSS) and share them with other users</li>
+<li><strong>Share plots and reports on Blipper</strong> — our internal data storytelling feed (like, reply, follow colleagues)</li>
+<li><strong>Search a knowledge base</strong> of epidemiological documents and references, and explore each collection as a wiki with an interactive knowledge graph</li>
+<li><strong>Organize your work into projects</strong> — group related sessions, reports, figures, and datasets into shareable workspaces</li>
+<li><strong>Write and run Python in your browser</strong> with the built-in code editor — no installation required</li>
+<li><strong>Answer clarifying questions</strong> — when a request is ambiguous, EpiDBot pauses mid-analysis and asks you structured questions</li>
+<li><strong>Stay up to date</strong> with an optional weekly bilingual newsletter of public-health publications and data updates</li>
+<li><strong>Remember your conversations</strong> across sessions so you can pick up where you left off</li>
+</ul>
+<p><img alt="EpiDBot Welcome Screen" src="screenshots/welcome-screen.png" /></p>
+<hr />
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h3 id="creating-an-account">Creating an Account<a class="headerlink" href="#creating-an-account" title="Permanent link">&para;</a></h3>
+<p>EpiDBot is currently in beta testing. To request access:</p>
+<ol>
+<li>Visit the EpiDBot login page</li>
+<li>Click the <strong>"Request an invitation"</strong> link in the beta notice banner</li>
+<li>Fill out the registration form</li>
+<li>Once approved, you will receive your credentials</li>
+</ol>
+<p><img alt="Login Page with Beta Notice" src="screenshots/login-beta-notice.png" /></p>
+<h3 id="logging-in">Logging In<a class="headerlink" href="#logging-in" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigate to the EpiDBot login page</li>
+<li>Enter your <strong>username</strong> and <strong>password</strong></li>
+<li>Click <strong>Sign In</strong></li>
+</ol>
+<p>You will be redirected to the chat interface. Your session is secured with JWT authentication.</p>
+<h3 id="email-verification">Email Verification<a class="headerlink" href="#email-verification" title="Permanent link">&para;</a></h3>
+<p>After registration, you will receive a verification email. Click the link to activate your account. If you did not receive it, go to <strong>Settings &gt; Profile</strong> and click <strong>Resend verification email</strong>.</p>
+<h3 id="choosing-your-language">Choosing Your Language<a class="headerlink" href="#choosing-your-language" title="Permanent link">&para;</a></h3>
+<p>EpiDBot supports five interface languages:</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td><code>en</code></td>
+</tr>
+<tr>
+<td>Portugues (Brasil)</td>
+<td><code>pt-BR</code></td>
+</tr>
+<tr>
+<td>Espanol</td>
+<td><code>es</code></td>
+</tr>
+<tr>
+<td>简体中文</td>
+<td><code>zh-CN</code></td>
+</tr>
+<tr>
+<td>العربية</td>
+<td><code>ar</code></td>
+</tr>
+</tbody>
+</table>
+<p>EpiDBot automatically detects your browser language on your first visit. You can change it at any time in <strong>Settings &gt; Language</strong> (see <a href="#settings">Settings</a>).</p>
+<p>You can also set the <strong>AI response language</strong> independently — for example, using the interface in English while receiving analysis responses in Portuguese.</p>
+<h3 id="navigation-overview">Navigation Overview<a class="headerlink" href="#navigation-overview" title="Permanent link">&para;</a></h3>
+<p>The sidebar (left side on desktop, hamburger menu on mobile) provides access to all sections:</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Section</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MessageSquare</td>
+<td><strong>Chat</strong></td>
+<td>Start a new analysis conversation</td>
+</tr>
+<tr>
+<td>FolderOpen</td>
+<td><strong>Sessions</strong></td>
+<td>Browse and manage past conversations</td>
+</tr>
+<tr>
+<td>Search</td>
+<td><strong>Search</strong></td>
+<td>Search across messages and code snippets</td>
+</tr>
+<tr>
+<td>Database</td>
+<td><strong>My Data</strong></td>
+<td>Upload and manage your own datasets</td>
+</tr>
+<tr>
+<td>FileText</td>
+<td><strong>Reports</strong></td>
+<td>Download generated PDF/Markdown reports</td>
+</tr>
+<tr>
+<td>Image</td>
+<td><strong>My Plots</strong></td>
+<td>Browse and manage your generated and uploaded plots</td>
+</tr>
+<tr>
+<td>FolderKanban</td>
+<td><strong>Projects</strong></td>
+<td>Organize sessions, reports, figures, and datasets into workspaces</td>
+</tr>
+<tr>
+<td>Blipper</td>
+<td><strong>Blipper</strong></td>
+<td>The data storytelling feed</td>
+</tr>
+<tr>
+<td>BookOpen</td>
+<td><strong>Knowledge Base</strong></td>
+<td>Manage documents and references</td>
+</tr>
+<tr>
+<td>Star</td>
+<td><strong>Favorites</strong></td>
+<td>Your starred reports, plots and datasets</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td><strong>Settings</strong></td>
+<td>Profile, API keys, plans, Git integrations, Zotero, voice, newsletter, language preferences</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Sidebar Navigation" src="screenshots/sidebar-navigation.png" /></p>
+<hr />
+<h2 id="your-first-analysis">Your First Analysis<a class="headerlink" href="#your-first-analysis" title="Permanent link">&para;</a></h2>
+<p>When you open the chat for the first time, EpiDBot will greet you with an onboarding tutorial to help you get started. The welcome screen also displays <strong>analysis starter templates</strong> — clickable suggestion cards with common analysis prompts such as "Analyze dengue trends" or "Compare health indicators." Click any card to immediately start an analysis, or type your own question in the input field.</p>
+<p><img alt="Welcome screen with suggestion cards" src="screenshots/welcome-suggestions.png" /></p>
+<p>Here is a quick walkthrough:</p>
+<h3 id="step-1-explore-available-data">Step 1: Explore Available Data<a class="headerlink" href="#step-1-explore-available-data" title="Permanent link">&para;</a></h3>
+<p>Type a question like:</p>
+<blockquote>
+<p>What datasets are available?</p>
+</blockquote>
+<p>EpiDBot will list the data sources you can access, including Brazilian DATASUS systems (SINAN, SIM, SINASC), WHO indicators, ECDC surveillance data, and more.</p>
+<h3 id="step-2-download-data">Step 2: Download Data<a class="headerlink" href="#step-2-download-data" title="Permanent link">&para;</a></h3>
+<p>Ask EpiDBot to download a specific dataset:</p>
+<blockquote>
+<p>Download dengue data for Sao Paulo in 2023</p>
+</blockquote>
+<p>EpiDBot will fetch the data, store it as a parquet file, and confirm when it is ready for analysis.</p>
+<h3 id="step-3-analyze-and-visualize">Step 3: Analyze and Visualize<a class="headerlink" href="#step-3-analyze-and-visualize" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Show me a bar chart of dengue cases by month</p>
+</blockquote>
+<p>EpiDBot will query the data, generate the chart, and display it directly in the chat.</p>
+<p><img alt="First Analysis Example" src="screenshots/first-analysis.png" /></p>
+<hr />
+<h2 id="the-chat-interface">The Chat Interface<a class="headerlink" href="#the-chat-interface" title="Permanent link">&para;</a></h2>
+<p>The chat is your primary workspace in EpiDBot. It is a full-featured conversational interface with real-time streaming, tool execution feedback, and rich content rendering.</p>
+<p><img alt="Chat Interface" src="screenshots/chat-interface.png" /></p>
+<h3 id="sending-messages">Sending Messages<a class="headerlink" href="#sending-messages" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Type your message in the input field at the bottom</li>
+<li>Press <strong>Enter</strong> to send (Shift+Enter for a new line)</li>
+<li>During streaming, you can type a new message to interrupt and redirect the analysis</li>
+<li>Use <strong>voice input</strong> by clicking the microphone button inside the input field. Speak naturally and your words will be transcribed in real-time. Click the microphone again to stop recording. Voice input uses your browser's built-in speech recognition.</li>
+</ul>
+<h3 id="streaming-responses">Streaming Responses<a class="headerlink" href="#streaming-responses" title="Permanent link">&para;</a></h3>
+<p>EpiDBot streams responses in real-time. You will see:</p>
+<ol>
+<li><strong>Analyzing animation</strong> — the EpiDBot avatar pulses with a complexity indicator:</li>
+<li>"Quick answer" — simple factual questions</li>
+<li>"Standard analysis" — single data lookups</li>
+<li>"Detailed analysis" — multi-step analysis with plots</li>
+<li>
+<p>"Deep analysis" — complex modeling or cross-dataset work</p>
+</li>
+<li>
+<p><strong>Tool execution</strong> — when EpiDBot uses a tool (downloading data, running SQL, generating a plot), you will see:</p>
+</li>
+<li>The tool name and a progress bar</li>
+<li>Elapsed time counter</li>
+<li>Status messages ("Processing...", "Analyzing data...")</li>
+<li>
+<p>Expandable code preview showing what code is running</p>
+</li>
+<li>
+<p><strong>Response text</strong> — the answer streams in character by character with a typing cursor</p>
+</li>
+</ol>
+<h3 id="interrupting-a-response">Interrupting a Response<a class="headerlink" href="#interrupting-a-response" title="Permanent link">&para;</a></h3>
+<p>While EpiDBot is processing or streaming, you can:</p>
+<ul>
+<li>Type a new message to <strong>interrupt and redirect</strong> the analysis</li>
+<li>Click the <strong>Cancel</strong> button (red square icon) to stop the current response entirely</li>
+</ul>
+<p>When you interrupt, any partial results are saved, and a new conversation turn begins with your new message.</p>
+<h3 id="answering-clarifying-questions">Answering Clarifying Questions<a class="headerlink" href="#answering-clarifying-questions" title="Permanent link">&para;</a></h3>
+<p>Sometimes a request can be interpreted in more than one way. Instead of guessing, EpiDBot can pause mid-analysis and show a <strong>question card</strong> with one or more structured questions (up to four at once). Each question has:</p>
+<ul>
+<li>A short <strong>header</strong> describing the topic</li>
+<li><strong>Option buttons</strong> — single-choice (round buttons) or "select all that apply" (square checkboxes), each with a brief description</li>
+<li>A <strong>free-text field</strong> to type your own answer if none of the options fit</li>
+</ul>
+<p>Select your answers for every question and click <strong>Submit answers</strong> — EpiDBot resumes the analysis using them. If you do not respond within about five minutes, EpiDBot continues with sensible defaults.</p>
+<h3 id="avatars-and-sender-attribution">Avatars and Sender Attribution<a class="headerlink" href="#avatars-and-sender-attribution" title="Permanent link">&para;</a></h3>
+<p>Every user message displays the <strong>sender's avatar</strong> next to it. In shared sessions, each message shows the avatar of the person who actually wrote it — so when colleagues contribute to a shared conversation, you can see at a glance who said what. Users without a profile photo are shown with their initials.</p>
+<h3 id="editing-messages">Editing Messages<a class="headerlink" href="#editing-messages" title="Permanent link">&para;</a></h3>
+<p>You can edit your last sent message by hovering over it and clicking the <strong>pencil icon</strong> that appears below. Edit the text in the inline editor and press <strong>Enter</strong> to resubmit. EpiDBot will discard the previous response and generate a new one based on your edited message. Press <strong>Escape</strong> to cancel editing.</p>
+<h3 id="rich-content-in-messages">Rich Content in Messages<a class="headerlink" href="#rich-content-in-messages" title="Permanent link">&para;</a></h3>
+<p>EpiDBot renders responses with full formatting support:</p>
+<ul>
+<li><strong>Markdown</strong> — headings, bold, italic, lists, links</li>
+<li><strong>Tables</strong> — sortable data tables with styled headers</li>
+<li><strong>Code blocks</strong> — syntax-highlighted with a dark theme; hover to reveal a <strong>copy button</strong> that copies the code to your clipboard</li>
+<li><strong>Math/LaTeX</strong> — mathematical notation rendered with KaTeX</li>
+<li><strong>Images and plots</strong> — charts and maps displayed inline</li>
+<li><strong>Data tables</strong> — hover to reveal <strong>Copy as TSV</strong> and <strong>Download CSV</strong> buttons for exporting table data</li>
+</ul>
+<h3 id="copying-messages">Copying Messages<a class="headerlink" href="#copying-messages" title="Permanent link">&para;</a></h3>
+<p>Hover over any assistant message to reveal a <strong>copy button</strong> that copies the full response text to your clipboard.</p>
+<h3 id="unanswered-messages">Unanswered Messages<a class="headerlink" href="#unanswered-messages" title="Permanent link">&para;</a></h3>
+<p>If a message was sent but never answered (e.g., due to a connection issue), an amber warning banner appears with a <strong>Retry</strong> button.</p>
+<p><img alt="Unanswered Message Banner" src="screenshots/unanswered-message.png" /></p>
+<h3 id="quota-enforcement">Quota Enforcement<a class="headerlink" href="#quota-enforcement" title="Permanent link">&para;</a></h3>
+<p>Before sending a message, EpiDBot checks your token quota. If you have exceeded your plan limit, an amber banner informs you of the quota status and when your quota resets.</p>
+<h3 id="exporting-chat-as-pdf">Exporting Chat as PDF<a class="headerlink" href="#exporting-chat-as-pdf" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>Export PDF</strong> button at the top of the chat to download the entire conversation as a formatted PDF document. This includes all messages, plots (embedded as images), tables, and formatting. You can also use the keyboard shortcut <code>Ctrl+Shift+E</code>.</p>
+<h3 id="message-feedback">Message Feedback<a class="headerlink" href="#message-feedback" title="Permanent link">&para;</a></h3>
+<p>After EpiDBot responds, you can rate the quality of the answer using the <strong>thumbs up</strong> or <strong>thumbs down</strong> buttons that appear when hovering over an assistant message. Click the same rating again to remove it. This feedback helps improve the system over time.</p>
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+K</code></td>
+<td>Open search</td>
+</tr>
+<tr>
+<td><code>Ctrl+N</code></td>
+<td>Start new session</td>
+</tr>
+<tr>
+<td><code>Ctrl+Shift+E</code></td>
+<td>Export chat as PDF</td>
+</tr>
+<tr>
+<td><code>Escape</code></td>
+<td>Close lightbox / cancel edit</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="data-sources">Data Sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+<p>EpiDBot connects to a wide range of public health data sources worldwide. Ask naturally — EpiDBot will automatically select the right source for your query.</p>
+<h3 id="brazilian-health-data-datasus">Brazilian Health Data (DATASUS)<a class="headerlink" href="#brazilian-health-data-datasus" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SINAN</strong></td>
+<td>Disease notification system (dengue, Zika, chikungunya, tuberculosis, HIV, etc.)</td>
+</tr>
+<tr>
+<td><strong>SIM</strong></td>
+<td>Mortality information system</td>
+</tr>
+<tr>
+<td><strong>SINASC</strong></td>
+<td>Live birth information system</td>
+</tr>
+<tr>
+<td><strong>SIH/SIA</strong></td>
+<td>Hospital and outpatient information systems</td>
+</tr>
+<tr>
+<td><strong>SINAN-NET</strong></td>
+<td>National notifiable diseases network</td>
+</tr>
+</tbody>
+</table>
+<p>You can query data by state, year, municipality, and disease. Example queries:</p>
+<blockquote>
+<p>Download SINAN dengue data for Rio de Janeiro in 2023</p>
+<p>What is the mortality rate for tuberculosis in the Northeast region?</p>
+<p>List all available datasets for 2024</p>
+</blockquote>
+<h3 id="international-data-sources">International Data Sources<a class="headerlink" href="#international-data-sources" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Plan requirement</p>
+<p>The international data sources below (ECDC, World Bank, PAHO, HealthData.gov, Mosqlimate, ANVISA, Pathoplexus, Malaria Atlas, GADM, GBIF, Eurostat, NZ Health) require the <strong>Pro</strong> plan or higher. The core Brazilian DATASUS systems and WHO indicators are available on <strong>all plans</strong>, including Free. See <a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a>.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Coverage</th>
+<th>What You Can Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WHO</strong> (Global Health Observatory)</td>
+<td>Global</td>
+<td>Health indicators, disease outbreaks, country profiles</td>
+</tr>
+<tr>
+<td><strong>ECDC</strong> (European Centre for Disease Prevention and Control)</td>
+<td>Europe</td>
+<td>Surveillance data, disease reports, epidemiological updates</td>
+</tr>
+<tr>
+<td><strong>World Bank</strong></td>
+<td>Global</td>
+<td>Health expenditure, life expectancy, immunization rates, demographic indicators</td>
+</tr>
+<tr>
+<td><strong>PAHO</strong> (Pan American Health Organization)</td>
+<td>Americas</td>
+<td>Immunization coverage, malaria/dengue data, health indicators</td>
+</tr>
+<tr>
+<td><strong>HealthData.gov</strong></td>
+<td>United States</td>
+<td>Hospital capacity, COVID metrics, vaccination data, nursing home data</td>
+</tr>
+<tr>
+<td><strong>Malaria Atlas Project</strong></td>
+<td>Global</td>
+<td>Plasmodium prevalence, vector occurrence, administrative boundaries, raster surfaces</td>
+</tr>
+<tr>
+<td><strong>Pathoplexus</strong></td>
+<td>Global</td>
+<td>Genomic sequence counts for organisms of interest</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mosqlimate-brazilian-climate-epidemiological-data">Mosqlimate (Brazilian Climate &amp; Epidemiological Data)<a class="headerlink" href="#mosqlimate-brazilian-climate-epidemiological-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>InfoDengue</strong> — epidemiological reports for dengue and other arboviruses</li>
+<li><strong>Climate data</strong> — daily and weekly weather observations</li>
+<li><strong>Mosquito occurrence</strong> — <em>Aedes aegypti</em> and <em>Aedes albopictus</em> occurrence records</li>
+<li><strong>EpiScanner</strong> — automated epidemiological surveillance data</li>
+<li><strong>Prediction models</strong> — browse registered forecasting models for mosquito-borne diseases</li>
+<li><strong>Predictions</strong> — view submitted predictions and forecasts from the model registry</li>
+</ul>
+<h3 id="geographic-data">Geographic Data<a class="headerlink" href="#geographic-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>GADM</strong> — administrative boundaries for any country (states, municipalities, regions)</li>
+<li><strong>Brazilian municipalities</strong> — IBGE codes, coordinates, state-level listings</li>
+</ul>
+<h3 id="more-specialized-sources">More Specialized Sources<a class="headerlink" href="#more-specialized-sources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ANVISA</strong> (Brazilian Health Regulatory Agency) — 15 open datasets covering medicines, food safety, cosmetics, pharmacovigilance, and more. Data is accessed via Brazil's federal open data portal (dados.gov.br).</li>
+<li><strong>ECDC Atlas of Infectious Diseases</strong> — 59 diseases across 8 categories (vaccine-preventable, food/waterborne, STIs, vector-borne, respiratory, zoonotic) with antimicrobial resistance data for all EU/EEA countries.</li>
+<li><strong>New Zealand Health Data</strong> — mortality records, hospital events, life tables, and immunisation coverage from New Zealand's Ministry of Health.</li>
+</ul>
+<h3 id="example-queries">Example Queries<a class="headerlink" href="#example-queries" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>What are the latest WHO disease outbreaks?</p>
+<p>Compare life expectancy across South American countries using World Bank data</p>
+<p>Download malaria vector occurrence data for Kenya</p>
+<p>List all ECDC surveillance datasets available</p>
+</blockquote>
+<p><img alt="Data Source Selection" src="screenshots/data-sources.png" /></p>
+<hr />
+<h2 id="my-data">My Data<a class="headerlink" href="#my-data" title="Permanent link">&para;</a></h2>
+<p>The <strong>My Data</strong> page lets you upload, manage, and preview your own datasets for private analysis alongside public data sources.</p>
+<h3 id="uploading-datasets">Uploading Datasets<a class="headerlink" href="#uploading-datasets" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigate to <strong>My Data</strong> in the sidebar</li>
+<li>Click the <strong>upload area</strong> or drag and drop a file</li>
+<li>Optionally add a <strong>description</strong> for your dataset</li>
+<li>Supported formats: <strong>CSV, ODS, XLSX, GeoJSON, Shapefile (.zip), GeoPackage</strong> (max 50 MB per file)</li>
+</ol>
+<p>Uploaded datasets are stored privately under your account and can be queried in the chat just like public data.</p>
+<div class="admonition note">
+<p class="admonition-title">Plan limits</p>
+<p>The number of uploaded datasets and total storage depend on your plan — Free: 1 dataset / 100 MB, Pro: 10 / 5 GB, Max: 50 / 25 GB, Team: unlimited. See <a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a>.</p>
+</div>
+<p><img alt="My Data page" src="screenshots/my-data-page.png" /></p>
+<h3 id="browsing-and-searching">Browsing and Searching<a class="headerlink" href="#browsing-and-searching" title="Permanent link">&para;</a></h3>
+<p>The dataset list shows each file with its name, row count, file size, and upload date. Use the <strong>search bar</strong> to filter by filename or description. Sort by <strong>Name</strong>, <strong>Rows</strong>, <strong>Size</strong>, or <strong>Date</strong> using the sort controls.</p>
+<h3 id="previewing-data">Previewing Data<a class="headerlink" href="#previewing-data" title="Permanent link">&para;</a></h3>
+<p>Click a dataset to expand it. Two tabs are available:</p>
+<ul>
+<li><strong>Schema</strong> — shows column names, data types, and nullable flags</li>
+<li><strong>Preview</strong> — displays the first 10 rows of data in a scrollable table (up to 15 columns shown, with horizontal scroll for wider datasets)</li>
+</ul>
+<p><img alt="Dataset preview" src="screenshots/dataset-preview.png" /></p>
+<h3 id="managing-datasets">Managing Datasets<a class="headerlink" href="#managing-datasets" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Edit description</strong> — click the description text to add or modify a description</li>
+<li><strong>Refresh</strong> — update the dataset metadata</li>
+<li><strong>Delete</strong> — remove the dataset (with confirmation)</li>
+</ul>
+<hr />
+<h2 id="analyzing-data">Analyzing Data<a class="headerlink" href="#analyzing-data" title="Permanent link">&para;</a></h2>
+<p>EpiDBot provides a comprehensive suite of analysis tools. Once data is downloaded or available in the catalog, you can ask for any type of analysis.</p>
+<h3 id="statistical-analysis">Statistical Analysis<a class="headerlink" href="#statistical-analysis" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Analysis Type</th>
+<th>Example Query</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temporal analysis</td>
+<td>"Show me the trend of dengue cases over time in Sao Paulo"</td>
+</tr>
+<tr>
+<td>Spatial analysis</td>
+<td>"Which municipalities have the highest Zika incidence?"</td>
+</tr>
+<tr>
+<td>Demographic analysis</td>
+<td>"Break down tuberculosis cases by age group and sex"</td>
+</tr>
+<tr>
+<td>Data quality report</td>
+<td>"Generate a data quality report for this dataset"</td>
+</tr>
+<tr>
+<td>Cross-dataset comparison</td>
+<td>"Compare dengue and Zika trends in the same region"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-queries">SQL Queries<a class="headerlink" href="#sql-queries" title="Permanent link">&para;</a></h3>
+<p>You can ask EpiDBot to run SQL queries directly on downloaded data:</p>
+<blockquote>
+<p>Query the dengue dataset to find the top 10 municipalities by case count in 2023</p>
+</blockquote>
+<p>EpiDBot translates your request into DuckDB SQL and returns the results as a formatted table.</p>
+<h3 id="sandbox-code-execution">Sandbox Code Execution<a class="headerlink" href="#sandbox-code-execution" title="Permanent link">&para;</a></h3>
+<p>For advanced analysis, EpiDBot can execute custom Python or SQL code in an isolated sandbox environment:</p>
+<blockquote>
+<p>Run a Python analysis to calculate the rolling 7-day average of dengue cases</p>
+</blockquote>
+<p>The sandbox includes common scientific libraries: pandas, numpy, matplotlib, seaborn, scikit-learn, and more.</p>
+<h3 id="actuarial-modeling">Actuarial Modeling<a class="headerlink" href="#actuarial-modeling" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Plan requirement</p>
+<p>Actuarial modeling requires the <strong>Pro</strong> plan or higher. See <a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a>.</p>
+</div>
+<p>EpiDBot includes a suite of actuarial modeling tools commonly used in insurance and risk analysis, driven entirely by natural language:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>What You Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Loss reserving</strong></td>
+<td>Chain-ladder, Bornhuetter-Ferguson, and Cape Cod methods on run-off triangles, with per-period reserves, IBNR estimates, Mack standard errors, and development plots</td>
+</tr>
+<tr>
+<td><strong>Claim modeling</strong></td>
+<td>Fit claim severity/frequency distributions by maximum likelihood, with goodness-of-fit tests and pricing of deductibles and limits (VaR/TVaR)</td>
+</tr>
+<tr>
+<td><strong>Portfolio aggregation</strong></td>
+<td>Combine component losses into a full portfolio loss distribution (FFT, Panjer recursion, Monte Carlo) and price reinsurance layers (excess-of-loss, stop-loss, quota share)</td>
+</tr>
+<tr>
+<td><strong>Lifetime modeling</strong></td>
+<td>Fit parametric survival/mortality models (exponential, Weibull, log-normal, and more, optionally with covariates), with life expectancy, median lifetime, survival, and hazard plots</td>
+</tr>
+</tbody>
+</table>
+<p>Example query:</p>
+<blockquote>
+<p>Using this run-off triangle of claim payments, estimate the IBNR reserves with the chain-ladder method and show the development plot</p>
+</blockquote>
+<h3 id="exporting-results">Exporting Results<a class="headerlink" href="#exporting-results" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Export the analysis results as a CSV file</p>
+</blockquote>
+<p>EpiDBot supports exporting query results in <strong>CSV, JSON, Excel, and Parquet</strong> formats. Ask naturally:</p>
+<blockquote>
+<p>Export these results as an Excel file</p>
+<p>Save the data as a Parquet file</p>
+</blockquote>
+<p>Exported files are downloaded directly to your computer.</p>
+<p><img alt="Analysis Results" src="screenshots/analysis-results.png" /></p>
+<hr />
+<h2 id="in-browser-code-editor-ide">In-Browser Code Editor (IDE)<a class="headerlink" href="#in-browser-code-editor-ide" title="Permanent link">&para;</a></h2>
+<p>The IDE lets you write and run Python <strong>entirely in your browser</strong> — no installation, no server round-trip. It is powered by Pyodide (Python compiled to WebAssembly) and comes with <strong>numpy, pandas, matplotlib, and DuckDB</strong> preloaded. Extra pure-Python packages can be installed on the fly with the built-in package installer (micropip).</p>
+<h3 id="opening-the-ide">Opening the IDE<a class="headerlink" href="#opening-the-ide" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Search page</strong> — click <strong>Edit &amp; Run</strong> on any saved code snippet</li>
+<li><strong>My Plots</strong> — click <strong>Edit &amp; Run</strong> on a plot card to open an editable copy of its code</li>
+<li><strong>Reports</strong> — open a report's <strong>Analysis code</strong> panel and click <strong>Open in IDE</strong> next to any snippet</li>
+</ul>
+<h3 id="writing-and-running-code">Writing and Running Code<a class="headerlink" href="#writing-and-running-code" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The editor provides Python syntax highlighting; click <strong>Run</strong> to execute</li>
+<li>Output (text, figures, DataFrames) appears in the output panel below, Jupyter-style</li>
+<li>Drag the <strong>splitter</strong> between editor and output panel to resize them (double-click resets the split)</li>
+<li>Execution is limited to <strong>30 seconds</strong> per run — for longer jobs, download the code and run it locally</li>
+</ul>
+<h3 id="loading-data">Loading Data<a class="headerlink" href="#loading-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click <strong>Load Data</strong> to browse catalog datasets and insert the corresponding <code>load_dataset(...)</code> call into your code</li>
+<li>Files under the server's <code>/data/</code> directory — including your own private uploads — are transparently available at their usual paths, so <code>pandas.read_parquet(...)</code>, <code>open(...)</code>, and DuckDB queries work as-is (files up to 300 MB)</li>
+</ul>
+<h3 id="saving-snippets">Saving Snippets<a class="headerlink" href="#saving-snippets" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click <strong>Save</strong> to store your code as a reusable snippet (searchable on the Search page)</li>
+<li>Snippets keep a <strong>version history</strong> you can browse and restore</li>
+<li>A snippet being edited is <strong>locked</strong> for 30 minutes so collaborators cannot overwrite your work in parallel</li>
+</ul>
+<p>The IDE is available on <strong>all plans</strong>.</p>
+<hr />
+<h2 id="visualizations-plots">Visualizations &amp; Plots<a class="headerlink" href="#visualizations-plots" title="Permanent link">&para;</a></h2>
+<p>EpiDBot can generate a wide variety of visualizations automatically. Just describe what you want to see.</p>
+<h3 id="chart-types">Chart Types<a class="headerlink" href="#chart-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Chart Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bar chart</td>
+<td>"Show a bar chart of cases by state"</td>
+</tr>
+<tr>
+<td>Line chart</td>
+<td>"Plot the temporal trend of malaria cases"</td>
+</tr>
+<tr>
+<td>Choropleth map</td>
+<td>"Create a map of dengue incidence by municipality"</td>
+</tr>
+<tr>
+<td>Histogram</td>
+<td>"Show the age distribution of tuberculosis patients"</td>
+</tr>
+<tr>
+<td>Box plot</td>
+<td>"Compare the distribution of cases across regions"</td>
+</tr>
+<tr>
+<td>Bubble chart</td>
+<td>"Plot GDP vs. life expectancy with population as bubble size"</td>
+</tr>
+<tr>
+<td>Stacked bar</td>
+<td>"Show disease cases stacked by age group"</td>
+</tr>
+<tr>
+<td>Raster/map</td>
+<td>"Render the malaria prevalence raster for Africa"</td>
+</tr>
+<tr>
+<td>Diagram/flowchart</td>
+<td>"Create a flowchart showing the epidemiological surveillance workflow"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="working-with-plots">Working with Plots<a class="headerlink" href="#working-with-plots" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Plots are displayed inline in the chat</li>
+<li>All plots are saved and can be referenced later</li>
+<li>You can ask EpiDBot to adjust colors, labels, or chart type</li>
+<li>Use <strong>"List available plots"</strong> to see previously generated visualizations</li>
+</ul>
+<h3 id="example-queries_1">Example Queries<a class="headerlink" href="#example-queries_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Compare dengue cases across Brazilian states for the last 5 years and create a visualization</p>
+<p>Generate a choropleth map of HIV incidence by municipality in Rio de Janeiro</p>
+<p>Plot a time series of WHO-reported cholera outbreaks</p>
+</blockquote>
+<p><img alt="Plot Example" src="screenshots/plot-example.png" /></p>
+<hr />
+<h2 id="my-plots">My Plots<a class="headerlink" href="#my-plots" title="Permanent link">&para;</a></h2>
+<p>The <strong>My Plots</strong> page provides a gallery of all your generated and uploaded visualizations in one place.</p>
+<h3 id="accessing-my-plots">Accessing My Plots<a class="headerlink" href="#accessing-my-plots" title="Permanent link">&para;</a></h3>
+<p>Click <strong>My Plots</strong> in the sidebar to browse all your plots displayed as a card grid.</p>
+<p><img alt="My Plots page" src="screenshots/my-plots-page.png" /></p>
+<h3 id="browsing-plots">Browsing Plots<a class="headerlink" href="#browsing-plots" title="Permanent link">&para;</a></h3>
+<p>Each plot card shows a thumbnail, filename, and description. Use the <strong>search bar</strong> to filter plots by filename or description.</p>
+<h3 id="lightbox-preview">Lightbox Preview<a class="headerlink" href="#lightbox-preview" title="Permanent link">&para;</a></h3>
+<p>Click any plot image to open a <strong>full-size lightbox preview</strong> that scales to fit your browser window. Press <strong>Escape</strong> or click outside the image to close.</p>
+<p><img alt="Plot lightbox preview" src="screenshots/plot-lightbox.png" /></p>
+<h3 id="managing-plots">Managing Plots<a class="headerlink" href="#managing-plots" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Copy reference</strong> — copy the markdown image reference for use in chat or reports</li>
+<li><strong>Edit &amp; Run</strong> — open the plot's code in the in-browser IDE to tweak and regenerate it</li>
+<li><strong>Add to project</strong> — link the plot to one of your <a href="#projects">projects</a></li>
+<li><strong>Edit description</strong> — add or modify the plot description</li>
+<li><strong>Delete</strong> — remove the plot (with confirmation)</li>
+<li><strong>Upload your own images</strong> (PNG, JPG, WebP, GIF, SVG)</li>
+<li><strong>Sync from chats</strong> — click the sync button to scan your chat history and register any plots not yet in the gallery</li>
+</ul>
+<hr />
+<h2 id="projects">Projects<a class="headerlink" href="#projects" title="Permanent link">&para;</a></h2>
+<p>Projects are <strong>transversal workspaces</strong> that link your existing sessions, reports, figures, and datasets around a common theme — for example, "Dengue Recife 2026". Items stay where they live (a report remains on the Reports page, a figure in My Plots); the project simply gathers them in one place. Projects are available on <strong>all plans</strong>.</p>
+<h3 id="creating-a-project">Creating a Project<a class="headerlink" href="#creating-a-project" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Projects</strong> in the sidebar</li>
+<li>Click <strong>New project</strong>, enter a <strong>name</strong> and an optional <strong>description</strong>, and click <strong>Create</strong></li>
+</ol>
+<p>You can also manage projects from the chat — just ask:</p>
+<blockquote>
+<p>Create a project called "Dengue Recife 2026" and add my latest dengue report to it</p>
+</blockquote>
+<h3 id="adding-items">Adding Items<a class="headerlink" href="#adding-items" title="Permanent link">&para;</a></h3>
+<p>On the <strong>My Plots</strong>, <strong>Reports</strong>, <strong>My Data</strong>, and <strong>Sessions</strong> pages, click the <strong>Add to project</strong> button on any card, then:</p>
+<ul>
+<li>Pick one of your projects from the list, or</li>
+<li>Type a new project name and click <strong>Create &amp; add</strong></li>
+</ul>
+<h3 id="browsing-projects">Browsing Projects<a class="headerlink" href="#browsing-projects" title="Permanent link">&para;</a></h3>
+<p>Each project card shows the name, description, and <strong>per-type item counts</strong> (sessions, reports, figures, datasets), plus a "Shared by" badge when the project was shared with you. Open a project to see four panels:</p>
+<ul>
+<li><strong>Sessions</strong> — linked conversations; click to resume</li>
+<li><strong>Reports</strong> — linked reports</li>
+<li><strong>Figures</strong> — linked plots with thumbnail previews</li>
+<li><strong>Datasets</strong> — linked datasets</li>
+</ul>
+<p>Every item links back to its original page and can be unlinked with the trash button (owners and editors only).</p>
+<h3 id="sharing-projects">Sharing Projects<a class="headerlink" href="#sharing-projects" title="Permanent link">&para;</a></h3>
+<p>Project owners can click <strong>Share</strong> and grant <strong>Viewer</strong> or <strong>Editor</strong> access to other users. Sharing a project grants recipients read access to the items it contains; editing an individual item still requires permission on that item.</p>
+<hr />
+<h2 id="blipper-the-data-storytelling-feed">Blipper — The Data Storytelling Feed<a class="headerlink" href="#blipper-the-data-storytelling-feed" title="Permanent link">&para;</a></h2>
+<p>Blipper is EpiDBot's internal social feed that lets you share plots, reports, and insights directly from your analyses. Think of it as a Twitter-like feed built for public health data storytelling.</p>
+<h3 id="sharing-content-to-blipper">Sharing Content to Blipper<a class="headerlink" href="#sharing-content-to-blipper" title="Permanent link">&para;</a></h3>
+<p>You can share content to Blipper from:</p>
+<ul>
+<li><strong>Chat messages</strong> — click the share button on any message bubble containing a figure or analysis</li>
+<li><strong>My Plots</strong> — click the <strong>Send to Blipper</strong> button on any plot card</li>
+</ul>
+<h3 id="the-feed">The Feed<a class="headerlink" href="#the-feed" title="Permanent link">&para;</a></h3>
+<p>The Blipper feed shows posts from people you follow (Home tab) and all public posts (Explore tab):</p>
+<ul>
+<li><strong>Rich attachments</strong> — shared plots appear as thumbnail images; click to open a full-screen lightbox for detailed viewing</li>
+<li><strong>Reports</strong> — shared reports appear as clickable links</li>
+<li><strong>Interact</strong> — like posts, reply to discussions, and follow colleagues</li>
+<li><strong>User profiles</strong> — click on any username to see their full profile and posting history</li>
+<li><strong>Notifications</strong> — get notified when someone likes your post, replies, or follows you</li>
+</ul>
+<h3 id="post-composer">Post Composer<a class="headerlink" href="#post-composer" title="Permanent link">&para;</a></h3>
+<p>When you share from chat or plots, a draft is pre-loaded into the post composer with the attachment and a suggested caption. You can edit the text, add mentions (<code>@username</code>), and choose whether to post from the "Share to Blipper" screen.</p>
+<hr />
+<h2 id="malaria-atlas">Malaria Atlas<a class="headerlink" href="#malaria-atlas" title="Permanent link">&para;</a></h2>
+<p>EpiDBot includes dedicated tools for accessing the Malaria Atlas Project (MAP) database, providing global data on malaria prevalence, mosquito vectors, and geographic boundaries.</p>
+<h3 id="available-data">Available Data<a class="headerlink" href="#available-data" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plasmodium prevalence surveys</td>
+<td>Point-in-time parasite rate surveys across the world</td>
+</tr>
+<tr>
+<td>Vector occurrence data</td>
+<td>Geolocated records of <em>Anopheles</em> mosquito species</td>
+</tr>
+<tr>
+<td>Administrative boundaries</td>
+<td>Shapefiles for countries, provinces, and districts</td>
+</tr>
+<tr>
+<td>Raster surfaces</td>
+<td>Gridded prevalence estimates and risk maps</td>
+</tr>
+<tr>
+<td>WHO AFRO admin-level data</td>
+<td>Administrative-level malaria indicators via API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-queries_2">Example Queries<a class="headerlink" href="#example-queries_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Download malaria prevalence survey data for Nigeria</p>
+<p>List all available Anopheles vector species</p>
+<p>Download administrative boundaries for Tanzania</p>
+<p>Show me the malaria prevalence raster surface for Southeast Asia</p>
+<p>Get malaria indicator data for Mozambique from WHO AFRO</p>
+</blockquote>
+<p><img alt="Malaria Atlas Tools" src="screenshots/malaria-atlas.png" /></p>
+<hr />
+<h2 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">&para;</a></h2>
+<p>EpiDBot can generate comprehensive PDF and Markdown reports from your analyses, using built-in templates with distinct visual styles.</p>
+<h3 id="report-templates">Report Templates<a class="headerlink" href="#report-templates" title="Permanent link">&para;</a></h3>
+<p>EpiDBot ships with <strong>6 built-in report templates</strong>, each with its own structure and colour theme:</p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Best for</th>
+<th>Style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Outbreak Investigation</strong></td>
+<td>Disease outbreak reports</td>
+<td>Cyan/teal accent</td>
+</tr>
+<tr>
+<td><strong>Rapid Risk Assessment</strong></td>
+<td>Risk scoring and confidence assessment</td>
+<td>Red/orange risk indicators</td>
+</tr>
+<tr>
+<td><strong>Epidemiological Summary</strong></td>
+<td>Operational surveillance summaries</td>
+<td>Green accent, data-forward</td>
+</tr>
+<tr>
+<td><strong>Scientific Report</strong></td>
+<td>Academic publications</td>
+<td>Black/serif, formal</td>
+</tr>
+<tr>
+<td><strong>Field Investigation</strong></td>
+<td>Short-term field investigation reports</td>
+<td>Blue accent, narrative style</td>
+</tr>
+<tr>
+<td><strong>Technical Report</strong></td>
+<td>General technical/analytical reports</td>
+<td>Purple accent, code-friendly</td>
+</tr>
+</tbody>
+</table>
+<p>You can also <strong>upload your own custom templates</strong> (Markdown structure + CSS theme) and share them with other users. Templates are managed on the Reports page — click the <strong>Templates</strong> header to expand the template gallery.</p>
+<p>Generated PDFs include the Kwar-AI logo in the footer alongside the "Generated by EpidBot" text.</p>
+<h3 id="generating-a-report">Generating a Report<a class="headerlink" href="#generating-a-report" title="Permanent link">&para;</a></h3>
+<p>Ask EpiDBot to create a report with a specific template:</p>
+<blockquote>
+<p>Generate a structured report on dengue trends in Brazil for 2023 using the Outbreak Investigation template</p>
+<p>Create a rapid risk assessment for the current chikungunya outbreak</p>
+</blockquote>
+<p>EpiDBot will compile the analysis results, plots, and interpretations into a formatted document using your selected template.</p>
+<h3 id="downloading-reports">Downloading Reports<a class="headerlink" href="#downloading-reports" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigate to <strong>Reports</strong> in the sidebar</li>
+<li>Browse your generated reports</li>
+<li>Click the <strong>Download PDF</strong> or <strong>Download Markdown</strong> icon</li>
+</ol>
+<p>Each report card shows the title, type (analysis, summary, data quality, comparison), creation date, file size, and number of images. The card toolbar also provides <strong>Edit</strong>, <strong>Add to project</strong>, <strong>Improve with AI</strong>, <strong>Download LaTeX (ZIP)</strong>, <strong>BibTeX</strong> (when the report has references), and share actions.</p>
+<h3 id="managing-reports">Managing Reports<a class="headerlink" href="#managing-reports" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Search</strong> reports by title or type</li>
+<li><strong>Delete</strong> reports you no longer need (with confirmation)</li>
+<li><strong>Version history</strong> — click a report to open the editor, where you can view all past versions and restore a previous version <em>(Max plan)</em></li>
+<li><strong>Edit and regenerate</strong> — modify the markdown content and regenerate the PDF</li>
+<li>Admins can toggle between <strong>"All Reports"</strong> and <strong>"My Reports"</strong> to view all users' reports</li>
+</ul>
+<h3 id="latex-export">LaTeX Export<a class="headerlink" href="#latex-export" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Plan requirement</p>
+<p>LaTeX export requires the <strong>Max</strong> plan.</p>
+</div>
+<p>Click the <strong>Download LaTeX (ZIP)</strong> button on a report card to get a ready-to-compile archive containing:</p>
+<ul>
+<li>The <strong><code>.tex</code> source</strong> — open it directly in Overleaf or any LaTeX editor</li>
+<li><strong><code>figures/</code></strong> — all figures referenced by the report (converted to PNG where needed)</li>
+<li><strong><code>references.bib</code></strong> — a BibTeX bibliography; in-text citations are rewritten to proper <code>\cite{...}</code> commands</li>
+<li><strong><code>code/</code></strong> — every analysis snippet linked to the report, with descriptive names and a README</li>
+</ul>
+<h3 id="scientific-manuscripts">Scientific Manuscripts<a class="headerlink" href="#scientific-manuscripts" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Plan requirement</p>
+<p>The scientific manuscript agent requires the <strong>Max</strong> plan.</p>
+</div>
+<p>Ask EpiDBot to write a full manuscript and it launches a multi-step AI pipeline (plan, analyze, write, reference, review) that produces a publication-oriented IMRaD report:</p>
+<blockquote>
+<p>Write a scientific manuscript on dengue trends in Rio de Janeiro from 2020 to 2024 using SINAN data</p>
+</blockquote>
+<p>Manuscript generation runs as a background job (typically 10–15 minutes) — you can keep chatting meanwhile, and a <strong>"Manuscript ready"</strong> banner with a link appears when it is done. Manuscripts include:</p>
+<ul>
+<li>A <strong>publication-grade Methods section</strong> with the full data-provenance flow, formal specification of every model and metric, and a reproducibility statement</li>
+<li><strong>Numbered equations</strong> that can be referenced in the text, on screen, in the PDF, and in the LaTeX export</li>
+<li>An <strong>Analysis code panel</strong> on the report page listing every snippet used, each with <strong>Open in IDE</strong> and <strong>Copy</strong> actions</li>
+</ul>
+<h3 id="plan-limits-for-reports">Plan Limits for Reports<a class="headerlink" href="#plan-limits-for-reports" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Free</strong> — up to <strong>3 reports per month</strong>; downloaded PDFs carry a light "FREE PLAN" watermark</li>
+<li><strong>Pro</strong> — unlimited reports, no watermark</li>
+<li><strong>Report sharing</strong> requires <strong>Pro</strong>; <strong>co-authoring</strong>, <strong>Zenodo publishing</strong>, <strong>version history</strong>, <strong>LaTeX export</strong>, and <strong>Overleaf push</strong> require <strong>Max</strong></li>
+</ul>
+<p>See <a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a> for the full matrix.</p>
+<h3 id="sharing-reports">Sharing Reports<a class="headerlink" href="#sharing-reports" title="Permanent link">&para;</a></h3>
+<p>Share reports with other EpiDBot users:</p>
+<ol>
+<li>Click the <strong>share icon</strong> on a report card</li>
+<li>Enter a <strong>username</strong> and choose <strong>Can view</strong> or <strong>Can edit</strong> permission</li>
+<li>Shared reports appear in the recipient's Reports page with a shared badge</li>
+</ol>
+<p><img alt="Reports Page" src="screenshots/reports-page.png" /></p>
+<hr />
+<h2 id="sessions">Sessions<a class="headerlink" href="#sessions" title="Permanent link">&para;</a></h2>
+<p>Every chat conversation is automatically saved as a <strong>session</strong>. You can view, resume, rename, share, and delete sessions.</p>
+<h3 id="accessing-sessions">Accessing Sessions<a class="headerlink" href="#accessing-sessions" title="Permanent link">&para;</a></h3>
+<p>Click <strong>Sessions</strong> in the sidebar to see all your conversations.</p>
+<p>The session sidebar in the chat view can be <strong>collapsed</strong> by clicking the collapse button in its header. This gives you more space for the chat. Click the expand button to bring it back.</p>
+<p><img alt="Sessions Page" src="screenshots/sessions-page.png" /></p>
+<h3 id="session-cards">Session Cards<a class="headerlink" href="#session-cards" title="Permanent link">&para;</a></h3>
+<p>Each session card displays:</p>
+<ul>
+<li>Session name</li>
+<li>Message count</li>
+<li>Last activity time (e.g., "2 hours ago")</li>
+<li><strong>Shared</strong> badge if the session has been shared with or by others</li>
+</ul>
+<h3 id="managing-sessions">Managing Sessions<a class="headerlink" href="#managing-sessions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create new session</td>
+<td>Click the <strong>+</strong> button, type a name, press Enter</td>
+</tr>
+<tr>
+<td>Rename a session</td>
+<td>Click the <strong>pencil</strong> icon on the session card</td>
+</tr>
+<tr>
+<td>Delete a session</td>
+<td>Click the <strong>trash</strong> icon (confirms before deleting)</td>
+</tr>
+<tr>
+<td>Resume a session</td>
+<td>Click the session card to open the conversation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sharing-sessions">Sharing Sessions<a class="headerlink" href="#sharing-sessions" title="Permanent link">&para;</a></h3>
+<p>You can share sessions with other EpiDBot users:</p>
+<div class="admonition note">
+<p class="admonition-title">Plan limits</p>
+<p>The <strong>Free</strong> plan allows <strong>1 active share link</strong>; <strong>Pro</strong> and above have unlimited share links. See <a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a>.</p>
+</div>
+<ol>
+<li>Click the <strong>share</strong> icon on a session card</li>
+<li>Type a <strong>username</strong> in the dialog (autocomplete will suggest matches)</li>
+<li>Choose a permission level:</li>
+<li><strong>Can view</strong> — read-only access to the conversation</li>
+<li><strong>Can edit</strong> — full access to continue the conversation</li>
+<li>Click <strong>Share</strong></li>
+</ol>
+<p>To revoke access, open the share dialog and click <strong>Revoke access</strong> next to the user's name.</p>
+<h3 id="shared-session-restrictions">Shared Session Restrictions<a class="headerlink" href="#shared-session-restrictions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sessions shared with you as "read-only" cannot be modified — the input area is replaced with a lock icon and message</li>
+<li>Sessions received from others cannot be renamed, deleted, or re-shared</li>
+<li>When someone shares a session with you, a blue notification banner appears at the top of your chat</li>
+</ul>
+<hr />
+<h2 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
+<p>The search page lets you find content across all your conversations and saved code snippets, with filters to narrow results by type.</p>
+<h3 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigate to <strong>Search</strong> in the sidebar</li>
+<li>Enter your search query in the text field</li>
+<li>Use the <strong>type selector</strong> tabs to filter results:</li>
+<li><strong>All</strong> — search both chat messages and code snippets</li>
+<li><strong>Sessions</strong> — search only chat conversation history</li>
+<li><strong>Code Snippets</strong> — search only saved analysis code</li>
+<li>Optionally filter by <strong>session</strong> or <strong>date range</strong></li>
+<li>Results appear in two categories:</li>
+<li><strong>Code Snippets</strong> — reusable code with language badges and download buttons</li>
+<li><strong>Chat Messages</strong> — matching messages with content preview and timestamps</li>
+</ol>
+<h3 id="search-results">Search Results<a class="headerlink" href="#search-results" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click any chat message result to navigate directly to that conversation</li>
+<li>Code snippets can be expanded to view the full source code</li>
+<li>Export individual messages as Markdown</li>
+</ul>
+<p><img alt="Search Page" src="screenshots/search-page.png" /></p>
+<hr />
+<h2 id="knowledge-base">Knowledge Base<a class="headerlink" href="#knowledge-base" title="Permanent link">&para;</a></h2>
+<p>The knowledge base stores documents and references that EpiDBot can search when answering your questions. It supports semantic search across embedded documents.</p>
+<h3 id="checking-status">Checking Status<a class="headerlink" href="#checking-status" title="Permanent link">&para;</a></h3>
+<p>The knowledge base status card shows whether the service is healthy and displays the current version. Click <strong>Check Status</strong> to refresh.</p>
+<h3 id="searching-the-knowledge-base">Searching the Knowledge Base<a class="headerlink" href="#searching-the-knowledge-base" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Enter a search query in the <strong>search field</strong></li>
+<li>Optionally select a <strong>collection</strong> to narrow results</li>
+<li>Results show: document name, relevance score, collection, and content preview</li>
+</ol>
+<h3 id="adding-sources">Adding Sources<a class="headerlink" href="#adding-sources" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Administrator only</p>
+<p>Adding sources to the knowledge base (web pages, text, document uploads, and Ministry of Health publications) is restricted to <strong>administrators</strong>. Regular users have read-only access: searching the knowledge base and browsing collections, sources, and wikis is available on all plans.</p>
+</div>
+<p>Administrators can add content to the knowledge base in three ways:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What to Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Web Page</strong></td>
+<td>Paste a URL and click "Add Web Page" — EpiDBot will fetch, extract, and embed the content</td>
+</tr>
+<tr>
+<td><strong>Text Content</strong></td>
+<td>Provide a document name and paste the text content</td>
+</tr>
+<tr>
+<td><strong>Upload Document</strong></td>
+<td>Upload a file (.pdf, .txt, .md, .doc, .docx)</td>
+</tr>
+</tbody>
+</table>
+<p>When adding content, select a target <strong>collection</strong> (or use the default collections: datasus, epidemiology, methodology).</p>
+<h3 id="managing-collections">Managing Collections<a class="headerlink" href="#managing-collections" title="Permanent link">&para;</a></h3>
+<p>The right panel shows:</p>
+<ul>
+<li><strong>Collections</strong> — all collections with their document counts</li>
+<li><strong>Sources</strong> — all documents with name and collection, sortable alphabetically</li>
+</ul>
+<h3 id="wiki-and-knowledge-graph">Wiki and Knowledge Graph<a class="headerlink" href="#wiki-and-knowledge-graph" title="Permanent link">&para;</a></h3>
+<p>The <strong>Wiki</strong> tab turns each collection into a browsable, Wikipedia-style knowledge structure automatically built from its documents:</p>
+<ul>
+<li><strong>Page tree</strong> — pages organized by category (Sources, Entities, Concepts, Synthesis), with clickable <code>[[wikilinks]]</code> between related pages</li>
+<li><strong>Ask the wiki a question</strong> — type a question and get a synthesized answer with cited sources, a confidence level, and suggested follow-up questions <em>(Max plan)</em></li>
+<li><strong>Graph view</strong> — click the <strong>Graph</strong> button to explore the collection's <strong>knowledge graph</strong>: nodes for pages, entities, and concepts, with status chips showing node/edge counts and the top hub pages. Available on <strong>all plans</strong>.</li>
+</ul>
+<p>You can also query the wiki and its knowledge graph directly from the chat. Admins can rebuild the knowledge graph from the <strong>Administration &gt; Wiki Management</strong> card, which also displays live graph statistics.</p>
+<p><img alt="Knowledge Base Page" src="screenshots/knowledge-base-page.png" /></p>
+<hr />
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<p>The settings page lets you manage your profile, security, API access, subscription, and language preferences.</p>
+<p><img alt="Settings Page" src="screenshots/settings-page.png" /></p>
+<h3 id="profile">Profile<a class="headerlink" href="#profile" title="Permanent link">&para;</a></h3>
+<p>Edit your <strong>username</strong>, <strong>email</strong>, and <strong>CPF/CNPJ</strong> (required for payments in Brazil). Click <strong>Update Profile</strong> to save.</p>
+<h3 id="change-password">Change Password<a class="headerlink" href="#change-password" title="Permanent link">&para;</a></h3>
+<p>Provide your current password and a new password (minimum 8 characters). The new password must be confirmed.</p>
+<h3 id="api-keys">API Keys<a class="headerlink" href="#api-keys" title="Permanent link">&para;</a></h3>
+<p>API keys allow programmatic access to EpiDBot's REST API. <strong>Requires the Max plan</strong> (see <a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a>).</p>
+<ul>
+<li><strong>Create a key</strong>: Enter a name and click create. The key is shown once — copy it immediately, as it cannot be viewed again.</li>
+<li><strong>Manage keys</strong>: View existing keys (showing name and prefix), delete keys you no longer need.</li>
+</ul>
+<h3 id="external-agents">External Agents<a class="headerlink" href="#external-agents" title="Permanent link">&para;</a></h3>
+<p>External agents are OpenClaw-compatible AI assistants (such as <a href="https://github.com/HKUDS/nanobot">nanobot</a>) running outside EpiDBot. Once registered, EpiDBot can <strong>send messages to them during a conversation</strong> and relay their responses back to you. This is the reverse of the <a href="https://github.com/openclaw/clawhub">EpiDBot skill</a> that lets external agents query EpiDBot — it enables EpiDBot to consult <em>your</em> agents. <strong>Requires the Max plan.</strong></p>
+<h4 id="registering-an-agent">Registering an Agent<a class="headerlink" href="#registering-an-agent" title="Permanent link">&para;</a></h4>
+<p>In <strong>Settings &gt; External Agents</strong>, fill in three fields and click <strong>Register Agent</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>A unique label for this agent (letters, numbers, spaces, hyphens, underscores; max 100 characters). You will use this name when asking EpiDBot to contact the agent.</td>
+<td><code>my-nanobot</code></td>
+</tr>
+<tr>
+<td><strong>Base URL</strong></td>
+<td>The public HTTPS endpoint where the agent is reachable. Must not resolve to a private or loopback IP address (blocked by SSRF protection).</td>
+<td><code>https://my-agent.example.com</code></td>
+</tr>
+<tr>
+<td><strong>Bearer Token</strong></td>
+<td>The authentication token EpiDBot will send in the <code>Authorization: Bearer</code> header. This is the token your agent's API expects. Stored encrypted in the database.</td>
+<td><code>sk-abc123...</code></td>
+</tr>
+</tbody>
+</table>
+<p>EpiDBot sends messages to your agent using the standard <strong>OpenAI-compatible <code>/v1/chat/completions</code> endpoint</strong>. Most agent runtimes (including nanobot's <code>nanobot serve</code> command) expose this endpoint by default.</p>
+<h4 id="using-external-agents">Using External Agents<a class="headerlink" href="#using-external-agents" title="Permanent link">&para;</a></h4>
+<p>Once registered, you can ask EpiDBot to consult the agent at any time during a conversation:</p>
+<blockquote>
+<p><em>"Consult my agent named my-nanobot and ask: what is the current dengue situation in Southeast Asia?"</em></p>
+</blockquote>
+<p>EpiDBot will call the <code>query_external_agent</code> tool, which sends your message to the agent's API and returns the reply. You can register multiple agents and address each by name.</p>
+<h4 id="managing-agents">Managing Agents<a class="headerlink" href="#managing-agents" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>View</strong> — registered agents appear in a list with their name, URL, and a masked token preview</li>
+<li><strong>Delete</strong> — click the trash icon to remove an agent; its encrypted token is permanently deleted from the database</li>
+<li><strong>REST API</strong> — agents can also be managed programmatically via <code>GET/POST/DELETE /api/v1/external-agents</code></li>
+</ul>
+<h4 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Auth tokens are <strong>Fernet-encrypted</strong> at rest using the server's master secret — they are never stored in plaintext</li>
+<li>Outbound requests include only the <code>Authorization: Bearer &lt;token&gt;</code> header and a JSON body</li>
+<li>Requests to <strong>private IP ranges</strong> (127.x, 10.x, 172.16–31.x, 192.168.x, link-local) are <strong>blocked</strong> to prevent SSRF attacks</li>
+</ul>
+<h3 id="git-integrations">Git Integrations<a class="headerlink" href="#git-integrations" title="Permanent link">&para;</a></h3>
+<p>Connect your <strong>GitHub</strong> or <strong>GitLab</strong> account in <strong>Settings &gt; Git Integrations</strong> so the agent can work with your repositories from the chat:</p>
+<ul>
+<li><strong>Read (Pro)</strong>: list repositories, browse files, read file contents, list branches/commits/issues/pull requests, and clone repositories into the session workspace</li>
+<li><strong>Write (Max)</strong>: create issues, comment on issues, and open pull/merge requests</li>
+</ul>
+<p>Personal access tokens are stored encrypted and can be removed at any time.</p>
+<h3 id="zotero">Zotero<a class="headerlink" href="#zotero" title="Permanent link">&para;</a></h3>
+<p>Connect a <strong>Zotero</strong> API key in <strong>Settings &gt; Zotero</strong> (Pro plan) to let the agent list your Zotero collections, fetch references from your library, and export a report's bibliography straight into Zotero.</p>
+<h3 id="voice">Voice<a class="headerlink" href="#voice" title="Permanent link">&para;</a></h3>
+<p><strong>Settings &gt; Voice</strong> controls server-side speech features used by voice mode: speech-to-text (transcription) and text-to-speech (spoken responses). Availability depends on deployment configuration (<code>GET /api/v1/voice/status</code>); browsers without built-in speech recognition fall back to the server-side transcription service.</p>
+<h3 id="plan-consultation-usage">Plan &amp; Consultation Usage<a class="headerlink" href="#plan-consultation-usage" title="Permanent link">&para;</a></h3>
+<p>Your plan determines your daily AI quota and which advanced features you can use. Each consultation represents an interaction with the AI (1 consultation = approximately 50,000 tokens of AI processing).</p>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Daily Quota</th>
+<th>Consultations/day</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Free</strong></td>
+<td>50,000 tokens</td>
+<td>1</td>
+<td>R$0</td>
+</tr>
+<tr>
+<td><strong>Pro</strong></td>
+<td>500,000 tokens</td>
+<td>10</td>
+<td>R$97/month</td>
+</tr>
+<tr>
+<td><strong>Max</strong></td>
+<td>1,500,000 tokens</td>
+<td>30</td>
+<td>R$197/month</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+<td>R$1,425/month</td>
+</tr>
+</tbody>
+</table>
+<p>For the complete feature-gating matrix and per-plan usage limits (monthly reports, share links, dataset storage, and more), see <a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a>.</p>
+<ul>
+<li><strong>Current plan badge</strong> — Free, Pro, Max, or Team</li>
+<li><strong>Usage bar</strong> — shows consultations used vs. limit, color-coded (green &lt; 70%, yellow 70-90%, red &gt; 90%)</li>
+<li><strong>Reset date</strong> — when your quota refreshes</li>
+</ul>
+<h4 id="upgrading-your-plan">Upgrading Your Plan<a class="headerlink" href="#upgrading-your-plan" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Click <strong>Upgrade</strong> to open the plan selector</li>
+<li>Choose between <strong>monthly plans</strong> and <strong>consultation packs</strong></li>
+<li>Select a payment method:</li>
+<li><strong>PIX</strong> — scan the QR code or copy the PIX code, payment is confirmed automatically</li>
+<li><strong>Credit Card</strong> — redirected to a secure payment page</li>
+<li>Once payment is confirmed, your plan is updated immediately</li>
+</ol>
+<h4 id="consultation-packs">Consultation Packs<a class="headerlink" href="#consultation-packs" title="Permanent link">&para;</a></h4>
+<p>Consultation packs are one-time purchases that do not expire. They are consumed after your monthly quota runs out.</p>
+<h3 id="language-preferences">Language Preferences<a class="headerlink" href="#language-preferences" title="Permanent link">&para;</a></h3>
+<p>Two independent language settings:</p>
+<ol>
+<li><strong>Interface Language</strong> — controls the UI language (sidebar, buttons, labels)</li>
+<li><strong>Chat Response Language</strong> — controls the language EpiDBot uses in its analysis responses</li>
+</ol>
+<p>You can, for example, set the interface to English while having EpiDBot respond in Portuguese.</p>
+<h3 id="newsletter">Newsletter<a class="headerlink" href="#newsletter" title="Permanent link">&para;</a></h3>
+<p>Subscribe to the <strong>weekly bilingual newsletter</strong> (Portuguese and English editions) with a roundup of public-health publications and data updates, including:</p>
+<ul>
+<li>Ministry of Health publications and new open-data releases from dados.gov.br</li>
+<li>Mosqlimate/InfoDengue updates and WHO Disease Outbreak News</li>
+<li>Health news from curated RSS feeds</li>
+</ul>
+<p>Click <strong>Subscribe</strong> in the <strong>Newsletter</strong> card on the Settings page. You will receive a confirmation email and must click its link to activate the subscription (<strong>double opt-in</strong>). You can unsubscribe at any time from the same card or from the link included in every issue. Sent issues are also available in a <strong>web archive</strong>, and per-language <strong>RSS feeds</strong> are linked from the login page. Admins manage the newsletter (schedule, sources, RSS feeds, issues, subscribers, and tips) in <strong>Administration &gt; Newsletter</strong>.</p>
+<h3 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h3>
+<p>Displays the application version and description.</p>
+<hr />
+<h2 id="subscription-plans-feature-gating">Subscription Plans &amp; Feature Gating<a class="headerlink" href="#subscription-plans-feature-gating" title="Permanent link">&para;</a></h2>
+<p>EpiDBot offers four subscription plans. Your plan determines both your <strong>daily AI usage quota</strong> and which <strong>advanced features</strong> you can access. You can view your current plan, usage, and upgrade at any time in <strong>Settings &gt; Plan</strong>.</p>
+<h3 id="plans-overview">Plans Overview<a class="headerlink" href="#plans-overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Daily AI Quota</th>
+<th>Consultations/day</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Free</strong></td>
+<td>50,000 tokens</td>
+<td>1</td>
+<td>R$0</td>
+</tr>
+<tr>
+<td><strong>Pro</strong></td>
+<td>500,000 tokens</td>
+<td>10</td>
+<td>R$97/month</td>
+</tr>
+<tr>
+<td><strong>Max</strong></td>
+<td>1,500,000 tokens</td>
+<td>30</td>
+<td>R$197/month</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+<td>R$1,425/month</td>
+</tr>
+</tbody>
+</table>
+<p><em>1 consultation ≈ 50,000 tokens of AI processing. Daily quotas reset every day and do not accumulate. Consultation packs (one-time purchases that never expire) are consumed after the daily quota runs out.</em></p>
+<h3 id="usage-limits-by-plan">Usage Limits by Plan<a class="headerlink" href="#usage-limits-by-plan" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Free</th>
+<th>Pro</th>
+<th>Max</th>
+<th>Team</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reports per month</td>
+<td>3</td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Active share links</td>
+<td>1</td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Watermark on PDF reports</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Scheduled (periodic) reports</td>
+<td>—</td>
+<td>2</td>
+<td>10</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Uploaded datasets</td>
+<td>1</td>
+<td>10</td>
+<td>50</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Dataset storage</td>
+<td>100 MB</td>
+<td>5 GB</td>
+<td>25 GB</td>
+<td>Unlimited</td>
+</tr>
+</tbody>
+</table>
+<h3 id="feature-gating-matrix">Feature Gating Matrix<a class="headerlink" href="#feature-gating-matrix" title="Permanent link">&para;</a></h3>
+<p>Each feature below requires the listed plan <strong>or higher</strong>. Anything not listed — chat with core DATASUS and WHO data, standard analyses and charts, sandbox code execution, the in-browser IDE, projects, search, session history, report generation within the monthly limit, and the newsletter — is available on <strong>all plans, including Free</strong>.</p>
+<h4 id="pro">Pro<a class="headerlink" href="#pro" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>What You Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zotero integration</strong></td>
+<td>List Zotero collections, fetch references, and export citations to Zotero</td>
+</tr>
+<tr>
+<td><strong>Git integrations</strong></td>
+<td>Read GitHub/GitLab repositories from the chat (issues, PRs, files, clones)</td>
+</tr>
+<tr>
+<td><strong>Full web scraping</strong></td>
+<td>Multi-file webpage scraping with JavaScript/headless rendering</td>
+</tr>
+<tr>
+<td><strong>All international data sources</strong></td>
+<td>ECDC &amp; ECDC Atlas, World Bank, PAHO, HealthData.gov, ANVISA, Mosqlimate, Pathoplexus, Malaria Atlas, GADM, GBIF, Eurostat, and NZ Health data</td>
+</tr>
+<tr>
+<td><strong>Advanced analysis tools</strong></td>
+<td>Causal DAGs, difference-in-differences, interrupted time series, propensity scores, panel regression, multivariate analysis, anomaly detection, decision trees, Markov models, cost-effectiveness, sensitivity analysis, and actuarial modeling (loss reserving, claim models, portfolio aggregation, lifetime models)</td>
+</tr>
+<tr>
+<td><strong>Custom report templates</strong></td>
+<td>Upload your own Markdown + CSS report templates</td>
+</tr>
+<tr>
+<td><strong>Session sharing</strong></td>
+<td>Unlimited session share links (Free: 1)</td>
+</tr>
+<tr>
+<td><strong>Report sharing</strong></td>
+<td>Share reports with other EpiDBot users</td>
+</tr>
+<tr>
+<td><strong>Scheduled (periodic) reports</strong></td>
+<td>Automatically generate reports on a daily/weekly/monthly schedule</td>
+</tr>
+<tr>
+<td><strong>Project roles</strong></td>
+<td>Role-based access inside projects</td>
+</tr>
+<tr>
+<td><strong>Activity feed</strong></td>
+<td>Cross-project activity tracking</td>
+</tr>
+<tr>
+<td><strong>Artifact provenance</strong></td>
+<td>Verify the origin and processing history of analyses</td>
+</tr>
+<tr>
+<td><strong>Analysis tasks</strong></td>
+<td>Assign analyses as trackable tasks in projects</td>
+</tr>
+</tbody>
+</table>
+<h4 id="max-includes-everything-in-pro">Max (includes everything in Pro)<a class="headerlink" href="#max-includes-everything-in-pro" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>What You Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LaTeX export</strong></td>
+<td>Download reports as LaTeX (.tex or ZIP with figures, BibTeX bibliography, and linked analysis code) ready for Overleaf</td>
+</tr>
+<tr>
+<td><strong>Report version history</strong></td>
+<td>Browse and restore previous versions of a report</td>
+</tr>
+<tr>
+<td><strong>Report co-authoring</strong></td>
+<td>Invite co-authors to collaborate on reports</td>
+</tr>
+<tr>
+<td><strong>Overleaf push</strong></td>
+<td>Push reports directly to your Overleaf projects</td>
+</tr>
+<tr>
+<td><strong>Zenodo publishing</strong></td>
+<td>Publish reports to Zenodo with a DOI</td>
+</tr>
+<tr>
+<td><strong>Public templates</strong></td>
+<td>Publish your report templates for the whole community</td>
+</tr>
+<tr>
+<td><strong>Scientific manuscript agent</strong></td>
+<td>AI-assisted manuscript writing with publication-grade Methods sections, numbered equations, and linked analysis code</td>
+</tr>
+<tr>
+<td><strong>CRATE enrichment</strong></td>
+<td>Enrich uploaded datasets with CRATE metadata</td>
+</tr>
+<tr>
+<td><strong>Wiki query</strong></td>
+<td>Ask questions and get synthesized answers from the KB wiki</td>
+</tr>
+<tr>
+<td><strong>KB analyzer / optimizer</strong></td>
+<td>Knowledge base analysis and optimization tools</td>
+</tr>
+<tr>
+<td><strong>API keys</strong></td>
+<td>Programmatic access to the EpiDBot REST API</td>
+</tr>
+<tr>
+<td><strong>External agents</strong></td>
+<td>Register and consult external AI agents (e.g. nanobot)</td>
+</tr>
+<tr>
+<td><strong>Advanced plots</strong></td>
+<td>Raster and geospatial visualizations (GeoTIFF rendering)</td>
+</tr>
+<tr>
+<td><strong>Git write access</strong></td>
+<td>Create issues, comment, and open pull/merge requests</td>
+</tr>
+</tbody>
+</table>
+<h4 id="team-includes-everything-in-max">Team (includes everything in Max)<a class="headerlink" href="#team-includes-everything-in-max" title="Permanent link">&para;</a></h4>
+<p>The Team plan includes every Max feature for the whole team, with unlimited usage limits (reports, share links, datasets, scheduled reports — see the table above), plus these <strong>Team-exclusive</strong> collaboration features:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>What You Get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Team workspaces</strong></td>
+<td>Shared team workspaces with pooled resources</td>
+</tr>
+<tr>
+<td><strong>Workspace context (team memory)</strong></td>
+<td>Shared instructions, glossary and decision log per project</td>
+</tr>
+<tr>
+<td><strong>Bulk KB embedding</strong></td>
+<td>Embed many documents into the knowledge base in bulk</td>
+</tr>
+<tr>
+<td><strong>Report comments</strong></td>
+<td>Threaded comments/annotations on reports</td>
+</tr>
+<tr>
+<td><strong>Human review workflow</strong></td>
+<td>Structured peer review of reports before publication</td>
+</tr>
+<tr>
+<td><strong>Verification attestation</strong></td>
+<td>Cryptographic attestation of analysis provenance</td>
+</tr>
+<tr>
+<td><strong>Incident war-room</strong></td>
+<td>Outbreak coordination: signal claiming and shared timelines</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Core data stays free</p>
+<p>The core Brazilian DATASUS systems (SINAN, SIM, SINASC, SIH/SIA, CNES, PNI, CIHA) and WHO Global Health Observatory indicators remain available on <strong>all plans, including Free</strong>.</p>
+</div>
+<h3 id="how-gating-works-in-practice">How Gating Works in Practice<a class="headerlink" href="#how-gating-works-in-practice" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>In the chat</strong> — if you ask for something your plan does not include, EpiDBot explains which plan is required instead of running the tool, and suggests upgrading in <strong>Settings &gt; Plan</strong></li>
+<li><strong>In the interface</strong> — gated buttons and cards show a lock badge with the required plan (e.g. "PRO", "MAX") and link to the upgrade page</li>
+<li><strong>Admins</strong> bypass all feature gates</li>
+</ul>
+<h3 id="expiry-grace-period-and-grandfathering">Expiry, Grace Period, and Grandfathering<a class="headerlink" href="#expiry-grace-period-and-grandfathering" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Grace period</strong> — if your paid plan expires, you keep full feature access for <strong>7 days</strong> (matching the token-quota grace period). After that, your account reverts to Free-plan behaviour.</li>
+<li><strong>Grandfathering</strong> — users who already had a paid plan when feature gating was introduced keep access to gated features for <strong>90 days</strong>. Users who upgrade afterwards get plan features immediately per the matrix above.</li>
+<li><strong>Upgrades are immediate</strong> — once payment is confirmed (PIX or credit card), the new plan's features and quotas apply right away, and new PDF exports no longer carry the Free-plan watermark.</li>
+</ul>
+<hr />
+<h2 id="tips-best-practices">Tips &amp; Best Practices<a class="headerlink" href="#tips-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="effective-prompting">Effective Prompting<a class="headerlink" href="#effective-prompting" title="Permanent link">&para;</a></h3>
+<p>EpiDBot works best when you are specific about what you want:</p>
+<table>
+<thead>
+<tr>
+<th>Instead of</th>
+<th>Try</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Show me data"</td>
+<td>"Download SINAN dengue data for Sao Paulo in 2023 and show monthly case counts"</td>
+</tr>
+<tr>
+<td>"Make a chart"</td>
+<td>"Create a bar chart comparing dengue cases across Brazilian states in 2023"</td>
+</tr>
+<tr>
+<td>"Analyze this"</td>
+<td>"Run a temporal analysis of tuberculosis cases by month, broken down by age group"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="working-with-datasets">Working with Datasets<a class="headerlink" href="#working-with-datasets" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Start by <strong>listing available datasets</strong> to understand what data you can access</li>
+<li>Use <strong>inspect dataset</strong> to see column names and sample data before querying</li>
+<li>For large datasets, filter by year and region to keep queries manageable</li>
+<li>EpiDBot remembers downloaded data within a session — you do not need to re-download</li>
+</ul>
+<h3 id="analysis-workflow">Analysis Workflow<a class="headerlink" href="#analysis-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Explore</strong> — list datasets, inspect schemas</li>
+<li><strong>Download</strong> — fetch the data you need</li>
+<li><strong>Query</strong> — ask specific questions about the data</li>
+<li><strong>Visualize</strong> — generate charts and maps</li>
+<li><strong>Report</strong> — compile findings into a PDF report</li>
+</ol>
+<h3 id="mid-stream-redirection">Mid-stream Redirection<a class="headerlink" href="#mid-stream-redirection" title="Permanent link">&para;</a></h3>
+<p>If EpiDBot is going in a direction you did not intend, simply type a new message while it is processing. The current analysis will be interrupted and a new turn begins.</p>
+<h3 id="organizing-work-with-projects">Organizing Work with Projects<a class="headerlink" href="#organizing-work-with-projects" title="Permanent link">&para;</a></h3>
+<p>For anything spanning multiple sessions — a dissertation chapter, an ongoing outbreak investigation — create a <a href="#projects">project</a> and add your sessions, reports, figures, and datasets to it as you go. You can then share the whole workspace with a colleague in one step instead of sharing items individually.</p>
+<h3 id="multi-language-analysis">Multi-language Analysis<a class="headerlink" href="#multi-language-analysis" title="Permanent link">&para;</a></h3>
+<p>You can ask questions in any language, and EpiDBot will respond accordingly. You can also mix languages within a session — for example, asking in Portuguese and requesting the output in English.</p>
+<hr />
+<h2 id="supported-languages">Supported Languages<a class="headerlink" href="#supported-languages" title="Permanent link">&para;</a></h2>
+<p>EpiDBot supports five languages for both the interface and AI responses:</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Interface</th>
+<th>AI Responses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Portugues (Brasil)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Espanol</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>简体中文</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>العربية</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>The interface language is set in <strong>Settings &gt; Language</strong> and can also be auto-detected from your browser. The AI response language is set independently in the same section.</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat not responding</td>
+<td>Check your internet connection. A "Reconnecting..." banner indicates a WebSocket issue.</td>
+</tr>
+<tr>
+<td>Plot images not loading</td>
+<td>Reload the page. Plot paths may need to be regenerated after long idle periods.</td>
+</tr>
+<tr>
+<td>"Quota Exceeded" message</td>
+<td>You have used your daily token allowance. It resets daily — or upgrade your plan / use a consultation pack.</td>
+</tr>
+<tr>
+<td>"This feature requires the Pro/Max/Team plan"</td>
+<td>The feature is gated to a higher plan. Upgrade in <strong>Settings &gt; Plan</strong> — see <a href="#subscription-plans--feature-gating">Subscription Plans &amp; Feature Gating</a>.</td>
+</tr>
+<tr>
+<td>PDF has a "FREE PLAN" watermark</td>
+<td>Watermarks apply to the Free plan. Upgrade to remove it; exports after upgrading are watermark-free.</td>
+</tr>
+<tr>
+<td>Data download is slow</td>
+<td>Large datasets (e.g., national SINAN data) take time to download. Try filtering by state or year.</td>
+</tr>
+<tr>
+<td>Sandbox execution fails</td>
+<td>The sandbox container may be restarting. Retry after a few seconds.</td>
+</tr>
+<tr>
+<td>External agent not responding</td>
+<td>Verify the agent's URL is reachable from the internet, the Bearer token is correct, and the agent is running. Check that the URL does not resolve to a private IP (blocked by SSRF protection).</td>
+</tr>
+<tr>
+<td>Language not changing</td>
+<td>Clear your browser cookies and reload. The language is stored in the <code>NEXT_LOCALE</code> cookie.</td>
+</tr>
+<tr>
+<td>"This message was not answered"</td>
+<td>A previous message failed. Click <strong>Retry</strong> to resend it.</td>
+</tr>
+<tr>
+<td>Newsletter confirmation email not arriving</td>
+<td>Check your spam folder. Your subscription stays "Pending confirmation" until you click the link in the email. Unsubscribe and subscribe again to resend it.</td>
+</tr>
+<tr>
+<td>IDE code stops after 30 seconds</td>
+<td>In-browser execution has a 30-second limit by design. Download the snippet and run it locally for longer jobs.</td>
+</tr>
+<tr>
+<td>Cannot add items to a shared project</td>
+<td>Only project owners and editors can add or remove items. Ask the owner for editor access.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h3>
+<p>If you encounter an issue not listed here:</p>
+<ol>
+<li>Check the session history — your previous conversations are always accessible</li>
+<li>Try starting a new session to isolate the problem</li>
+<li>Contact the EpiDBot team via the GitHub repository</li>
+</ol>
+<hr />
+<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DATASUS</strong></td>
+<td>Brazilian Department of Informatics of the Unified Health System — the primary source of Brazilian public health data</td>
+</tr>
+<tr>
+<td><strong>SINAN</strong></td>
+<td>Sistema de Informacao de Agravos de Notificacao — Brazil's disease notification system</td>
+</tr>
+<tr>
+<td><strong>Parquet</strong></td>
+<td>A columnar storage file format used for efficient data querying</td>
+</tr>
+<tr>
+<td><strong>DuckDB</strong></td>
+<td>An in-process analytical database used by EpiDBot to query parquet files</td>
+</tr>
+<tr>
+<td><strong>Token</strong></td>
+<td>A unit of AI processing usage. Each message consumes tokens based on length and complexity.</td>
+</tr>
+<tr>
+<td><strong>Session</strong></td>
+<td>A conversation thread with EpiDBot. All messages and results are saved within a session.</td>
+</tr>
+<tr>
+<td><strong>Knowledge Base</strong></td>
+<td>A collection of embedded documents that EpiDBot can search for relevant information</td>
+</tr>
+<tr>
+<td><strong>Dream</strong></td>
+<td>EpiDBot's self-improvement system that analyzes conversations to discover and refine analysis skills</td>
+</tr>
+<tr>
+<td><strong>Skill</strong></td>
+<td>A reusable analysis pattern discovered by the Dream system, automatically applied when relevant</td>
+</tr>
+<tr>
+<td><strong>Sandbox</strong></td>
+<td>An isolated Docker container for executing Python and SQL code safely</td>
+</tr>
+<tr>
+<td><strong>Catalog</strong></td>
+<td>A metadata index of all downloaded datasets, their schemas, and row counts</td>
+</tr>
+<tr>
+<td><strong>Raster</strong></td>
+<td>A gridded geospatial data format (e.g., GeoTIFF) used for continuous surface maps</td>
+</tr>
+<tr>
+<td><strong>IBGE</strong></td>
+<td>Instituto Brasileiro de Geografia e Estatistica — Brazil's geography and statistics institute</td>
+</tr>
+<tr>
+<td><strong>WHO GHO</strong></td>
+<td>World Health Organization Global Health Observatory — a repository of health indicators</td>
+</tr>
+<tr>
+<td><strong>ECDC</strong></td>
+<td>European Centre for Disease Prevention and Control</td>
+</tr>
+<tr>
+<td><strong>PAHO</strong></td>
+<td>Pan American Health Organization</td>
+</tr>
+<tr>
+<td><strong>GADM</strong></td>
+<td>Database of Global Administrative Areas — provides boundary shapefiles</td>
+</tr>
+<tr>
+<td><strong>PIX</strong></td>
+<td>Brazilian instant payment system used for subscription payments</td>
+</tr>
+<tr>
+<td><strong>Voice Input</strong></td>
+<td>Browser-based speech recognition for entering messages by voice</td>
+</tr>
+<tr>
+<td><strong>Lightbox</strong></td>
+<td>Full-size image overlay for previewing plots at their natural resolution</td>
+</tr>
+<tr>
+<td><strong>User Dataset</strong></td>
+<td>A dataset uploaded by a user (CSV, Excel, GeoJSON, etc.), stored privately and queryable like public data</td>
+</tr>
+<tr>
+<td><strong>Version History</strong></td>
+<td>A timeline of saved report versions that can be browsed and restored</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td>A workspace that links related sessions, reports, figures, and datasets around a common theme, and can be shared as a whole</td>
+</tr>
+<tr>
+<td><strong>Pyodide</strong></td>
+<td>Python compiled to WebAssembly — the technology that powers the in-browser code editor (IDE)</td>
+</tr>
+<tr>
+<td><strong>Newsletter</strong></td>
+<td>Weekly bilingual (PT/EN) email roundup of public-health publications, datasets, and news</td>
+</tr>
+<tr>
+<td><strong>BibTeX</strong></td>
+<td>Bibliography file format used by LaTeX; report exports include a references.bib file</td>
+</tr>
+<tr>
+<td><strong>Knowledge Graph</strong></td>
+<td>A network of wiki pages, entities, and concepts built from knowledge base collections, explorable in the Graph view</td>
+</tr>
+<tr>
+<td><strong>External Agent</strong></td>
+<td>An OpenClaw-compatible AI assistant (e.g. nanobot) registered by a user, which EpiDBot can send messages to and relay responses from</td>
+</tr>
+<tr>
+<td><strong>OpenClaw</strong></td>
+<td>An open agent runtime/platform whose agents can install and invoke "skills" — packaged capabilities described by a SKILL.md manifest</td>
+</tr>
+<tr>
+<td><strong>nanobot</strong></td>
+<td>A lightweight, open-source personal AI agent that exposes an OpenAI-compatible <code>/v1/chat/completions</code> endpoint for receiving messages</td>
+</tr>
+<tr>
+<td><strong>Feature Gate</strong></td>
+<td>A plan-based restriction that limits a feature to a minimum subscription plan (Free &lt; Pro &lt; Max &lt; Team)</td>
+</tr>
+<tr>
+<td><strong>Grace Period</strong></td>
+<td>The 7-day window after a paid plan expires during which feature access is retained</td>
+</tr>
+<tr>
+<td><strong>Grandfathering</strong></td>
+<td>The 90-day window during which existing paid users keep access to features that became gated</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>EpiDBot is developed by Kwar-AI. For technical documentation, visit the <a href="https://github.com/Deeplearn-PeD/EpiDBot">GitHub repository</a>.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Deeplearn-PeD/epidbot-manual" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.top", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
