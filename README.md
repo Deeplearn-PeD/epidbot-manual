@@ -3,7 +3,7 @@
 Step-by-step user manual for [EpiDBot](https://github.com/Deeplearn-PeD/EpiDBot)
 — AI-powered public health data analytics.
 
-**Browse the manual:** https://deeplearn-ped.github.io/epidbot-manual/
+**Browse the manual:** https://deeplearn.ltd/epidbot-manual/
 
 Available in English (`docs/index.md`) and Portuguese
 (`docs/manual-pt.md`), with screenshots under `docs/screenshots/`.
