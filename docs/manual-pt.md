@@ -941,6 +941,15 @@ Para a matriz completa de recursos por plano e os limites de uso (relatórios me
 
 Consultation packs are one-time purchases that do not expire. They are consumed after your monthly quota runs out.
 
+#### Desconto Acadêmico (50% de Desconto)
+
+Estudantes, docentes e pesquisadores podem obter **50% de desconto em qualquer plano pago**. Há duas formas de se qualificar:
+
+1. **Automaticamente** — verifique um endereço de email em um domínio acadêmico (`.edu*`, `.ac.<país>`, além de domínios institucionais reconhecidos). O desconto é aplicado assim que o email é verificado.
+2. **Por solicitação** — se seu email não é de um domínio acadêmico, clique em **"Solicitar desconto acadêmico"** em **Configurações > Plano**. A solicitação vai para análise dos administradores e você receberá um email quando for aprovada. O selo exibe **"em análise"** nesse intervalo. É necessário ter um email verificado para enviar a solicitação.
+
+Uma vez concedido, o desconto é aplicado **automaticamente no checkout** de qualquer plano (Pro, Max ou Equipe) — sem necessidade de cupom. O EpiDBot também oferece um **desconto anual** (pagamento antecipado de 12 meses); quando ambos se aplicam, vale o melhor desconto único (eles nunca se acumulam).
+
 ### Preferências de Idioma
 
 Two independent language settings:
@@ -980,6 +989,15 @@ O EpiDBot oferece quatro planos de assinatura. Seu plano determina tanto a **cot
 | **Equipe** | Ilimitada | Ilimitadas | R$1.425/mês |
 
 *1 consulta ≈ 50.000 tokens de processamento de IA. As cotas diárias reiniciam todos os dias e não acumulam. Os pacotes de consulta (compras únicas que nunca expiram) são consumidos após o esgotamento da cota diária.*
+
+### Descontos
+
+| Desconto | Valor | Como se Qualificar |
+|---|---|---|
+| **Acadêmico** | 50% em qualquer plano | Email verificado em domínio acadêmico, ou solicitação aprovada (veja [Configurações > Plano](#plano-e-uso-de-consultas)) |
+| **Anual** | 30% | Pagamento antecipado de 12 meses (cobrança única) |
+
+Os descontos nunca se acumulam — vale o melhor desconto único, e o desconto acadêmico tem precedência quando ambos se qualificam. Veja [Desconto Acadêmico](#desconto-academico-50-de-desconto) para o fluxo de solicitação.
 
 ### Limites de Uso por Plano
 
@@ -1061,6 +1079,7 @@ O plano Equipe inclui todos os recursos do Max para toda a equipe, com limites d
 - **Período de carência** — se seu plano pago expira, você mantém acesso completo aos recursos por **7 dias** (o mesmo período de carência da cota de tokens). Após isso, sua conta volta ao comportamento do plano Gratuito.
 - **Grandfathering** — usuários que já tinham um plano pago quando o controle de recursos foi introduzido mantêm acesso aos recursos bloqueados por **90 dias**. Quem faz upgrade depois recebe os recursos do plano imediatamente, conforme a matriz acima.
 - **Upgrades são imediatos** — assim que o pagamento é confirmado (PIX ou cartão de crédito), os recursos e cotas do novo plano valem na hora, e as novas exportações de PDF deixam de ter a marca d'água do plano Gratuito.
+- **Planos que nunca expiram** — administradores podem fixar o plano de um usuário para que ele nunca expire (a data de validade é totalmente ignorada). Se seu plano não mostra data de renovação/validade mas permanece ativo, é por isso — fale com seu administrador em caso de dúvidas.
 
 ---
 

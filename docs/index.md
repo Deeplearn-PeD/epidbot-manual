@@ -958,6 +958,15 @@ For the complete feature-gating matrix and per-plan usage limits (monthly report
 
 Consultation packs are one-time purchases that do not expire. They are consumed after your monthly quota runs out.
 
+#### Academic Discount (50% Off)
+
+Students, faculty and researchers can get **50% off any paid plan**. There are two ways to qualify:
+
+1. **Automatically** — verify an email address on an academic domain (`.edu*`, `.ac.<country>`, e.g. `@fiocruz.br` is detected via email-country, `name@university.edu`, `user@ox.ac.uk`). The discount is applied as soon as the email is verified.
+2. **By claiming** — if your email is not on an academic domain, click **"Claim academic discount"** in **Settings > Plan**. Your claim goes to the administrators for review, and you will receive an email once it is approved. The badge shows **"under review"** in the meantime. A verified email address is required to submit a claim.
+
+Once granted, the discount is applied **automatically at checkout** on any plan (Pro, Max, or Team) — no coupon code needed. EpiDBot may also offer an **annual discount** (prepay 12 months upfront); when both qualify, the best single discount applies (they never stack).
+
 ### Language Preferences
 
 Two independent language settings:
@@ -997,6 +1006,15 @@ EpiDBot offers four subscription plans. Your plan determines both your **daily A
 | **Team** | Unlimited | Unlimited | R$1,425/month |
 
 *1 consultation ≈ 50,000 tokens of AI processing. Daily quotas reset every day and do not accumulate. Consultation packs (one-time purchases that never expire) are consumed after the daily quota runs out.*
+
+### Discounts
+
+| Discount | Value | How to Qualify |
+|---|---|---|
+| **Academic** | 50% off any plan | Verified email on an academic domain, or an approved claim (see [Settings > Plan](#settings)) |
+| **Annual** | 30% off | Prepay 12 months upfront (single charge) |
+
+Discounts never stack — the best single discount wins, and the academic discount takes precedence when both qualify. See [Academic Discount](#academic-discount-50-off) for the claim workflow.
 
 ### Usage Limits by Plan
 
@@ -1078,6 +1096,7 @@ The Team plan includes every Max feature for the whole team, with unlimited usag
 - **Grace period** — if your paid plan expires, you keep full feature access for **7 days** (matching the token-quota grace period). After that, your account reverts to Free-plan behaviour.
 - **Grandfathering** — users who already had a paid plan when feature gating was introduced keep access to gated features for **90 days**. Users who upgrade afterwards get plan features immediately per the matrix above.
 - **Upgrades are immediate** — once payment is confirmed (PIX or credit card), the new plan's features and quotas apply right away, and new PDF exports no longer carry the Free-plan watermark.
+- **Never-expiring plans** — administrators can pin a user's plan so it never expires (the expiry date is ignored entirely). If your plan shows no renewal/expiry date but remains active, this is why — contact your administrator with any questions.
 
 ---
 
