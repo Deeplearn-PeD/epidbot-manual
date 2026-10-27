@@ -23,16 +23,17 @@ Versão 2.8.0 | Kwar-AI
 11. [Projetos](#projetos)
 12. [Blipper — O Feed de Compartilhamento de Dados](#blipper)
 13. [Malaria Atlas](#malaria-atlas)
-14. [Relatórios](#relatórios)
-15. [Sessões](#sessões)
-16. [Busca](#busca)
-17. [Base de Conhecimento](#base-de-conhecimento)
-18. [Configurações](#configurações)
-19. [Planos de Assinatura e Recursos por Plano](#planos-de-assinatura-e-recursos-por-plano)
-20. [Dicas e Boas Práticas](#dicas-e-boas-práticas)
-21. [Idiomas Suportados](#idiomas-suportados)
-22. [Resolução de Problemas](#resolução-de-problemas)
-23. [Glossário](#glossário)
+14. [Plugin QGIS do EpiDBot](#plugin-qgis-do-epidbot)
+15. [Relatórios](#relatórios)
+16. [Sessões](#sessões)
+17. [Busca](#busca)
+18. [Base de Conhecimento](#base-de-conhecimento)
+19. [Configurações](#configurações)
+20. [Planos de Assinatura e Recursos por Plano](#planos-de-assinatura-e-recursos-por-plano)
+21. [Dicas e Boas Práticas](#dicas-e-boas-práticas)
+22. [Idiomas Suportados](#idiomas-suportados)
+23. [Resolução de Problemas](#resolução-de-problemas)
+24. [Glossário](#glossário)
 
 ---
 
@@ -53,6 +54,7 @@ O EpiDBot é um assistente de IA que ajuda você a explorar, analisar e visualiz
 - **Pesquisar uma base de conhecimento** de documentos e referências epidemiológicas, e explorar cada coleção como uma wiki com grafo de conhecimento interativo
 - **Organizar seu trabalho em projetos** — agrupe sessões, relatórios, gráficos e conjuntos de dados relacionados em espaços de trabalho compartilháveis
 - **Escrever e executar Python no navegador** com o editor de código integrado — sem precisar instalar nada
+- **Conversar com o EpiDBot dentro do QGIS** — instale o [plugin QGIS](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin) para fazer perguntas a partir do seu SIG e carregar respostas GeoJSON direto no mapa (consulte [Plugin QGIS do EpiDBot](#plugin-qgis-do-epidbot))
 - **Responder perguntas de esclarecimento** — quando um pedido é ambíguo, o EpiDBot pausa a análise e faz perguntas estruturadas
 - **Ficar em dia** com um boletim semanal bilíngue opcional de publicações e atualizações de dados de saúde pública
 - **Lembrar suas conversas** entre sessões para que você possa retomar de onde parou
@@ -629,6 +631,73 @@ EpiDBot includes dedicated tools for accessing the Malaria Atlas Project (MAP) d
 
 ---
 
+## Plugin QGIS do EpiDBot
+
+O **plugin QGIS do EpiDBot** traz o chat do EpiDBot diretamente para dentro do [QGIS](https://qgis.org/), o sistema de informação geográfica livre e de código aberto. Faça perguntas epidemiológicas, gere gráficos e carregue resultados geoespaciais no seu mapa — tudo sem sair do seu fluxo de trabalho em SIG.
+
+O plugin conversa com sua conta EpiDBot pela mesma API REST da interface web, então sessões, gráficos e cotas permanecem sincronizados. Ele é desenvolvido em código aberto em [github.com/Deeplearn-PeD/epidbot-qgis-plugin](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin) sob a licença GPL-2.0-or-later.
+
+### Requisitos
+
+- **QGIS 3.28** ou mais recente (Windows, macOS ou Linux)
+- Uma **chave de API do EpiDBot** pessoal — crie uma na interface web do EpiDBot em **Configurações > Chaves de API** (consulte [Chaves de API](#chaves-de-api))
+- Conexão com a internet até o servidor do EpiDBot
+
+### Instalando o Plugin
+
+1. Baixe o ZIP mais recente do plugin: [epidbot.zip](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases/latest/download/epidbot.zip) — este link sempre aponta para a versão mais recente
+2. No QGIS, abra **Complementos > Gerenciar e Instalar Complementos > Instalar a partir de ZIP**
+3. Selecione o arquivo baixado e clique em **Instalar Complemento**
+4. Abra o painel **EpiDBot Chat** na barra de ferramentas do QGIS
+
+### Configurando o Plugin
+
+Clique no **botão ⚙ (engrenagem)** no painel de chat para abrir as configurações:
+
+| Configuração | Significado |
+|---|---|
+| **URL do Servidor** | URL base da API do EpiDBot — pré-preenchida com o padrão `https://api.epidbot.kwar-ai.com.br` |
+| **Chave de API** | Sua chave de API pessoal do EpiDBot, enviada no cabeçalho `X-API-Key` em cada requisição. Armazenada no cofre de credenciais do sistema quando o pacote opcional `keyring` está disponível |
+| **Idioma das respostas** | Idioma das respostas da IA: `en` ou `pt-BR` |
+| **Intervalo de sondagem de status** | Segundos entre as consultas de status do trabalho (padrão 1,5 s) |
+
+### Conversando pelo QGIS
+
+O painel de chat **EpiDBot Chat** encaixável funciona como o chat web:
+
+- Digite uma pergunta e pressione Enter — as respostas são renderizadas com formatação Markdown, tabelas e miniaturas de gráficos embutidas
+- Escolha uma **sessão existente** no seletor de sessões, inicie uma **nova** ou deixe o servidor criar uma automaticamente; ao trocar de sessão o histórico é recarregado, incluindo os gráficos
+- **Exporte uma conversa** para um arquivo Markdown
+- A interface do painel está disponível em **inglês e português do Brasil**, e as requisições de chat rodam em uma thread de segundo plano para o QGIS continuar responsivo enquanto o EpiDBot trabalha
+
+### Integração com o Mapa
+
+É aqui que o plugin brilha — o EpiDBot entende o seu projeto do QGIS e pode devolver resultados diretamente no mapa:
+
+- **Injeção de contexto do mapa** — cada pergunta inclui automaticamente suas camadas ativas (com nomes de campos, valores de exemplo e seleções atuais), a extensão do canvas (EPSG:4326) e o SRC do projeto, para que o EpiDBot saiba o que você está vendo
+- **Prompts espaciais** — ações de um clique na barra de ferramentas permitem perguntar sobre a **extensão atual do mapa** ou as **feições que você selecionou**
+- **"Adicionar ao mapa"** — blocos GeoJSON e URLs de conjuntos de dados nas respostas viram camadas estilizadas no canvas com um único clique
+
+Prompts de exemplo:
+
+> Mapeie a incidência de dengue dos municípios atualmente carregados no meu projeto
+
+> Qual é a população total dos municípios selecionados?
+
+### Trabalhando com Gráficos
+
+Cada gráfico gerado pelo plugin oferece três ações:
+
+- **Salvar no disco** — exportar o arquivo de imagem
+- **Abrir no visualizador de imagens**
+- **Inserir em layout de impressão** — adicione o gráfico a um layout de impressão *"EpidBot Plots"* para composições cartográficas
+
+### Em Breve
+
+Recursos planejados incluem um **navegador do catálogo de conjuntos de dados** (navegue pelos dados do EpiDBot e carregue-os diretamente como camadas do QGIS), envio de documentos a partir do QGIS e publicação no repositório oficial de plugins do QGIS — fique de olho na [página de releases](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases).
+
+---
+
 ## Relatórios
 
 EpiDBot can generate comprehensive PDF and Markdown reports from your analyses, using built-in templates with distinct visual styles.
@@ -1159,6 +1228,8 @@ The interface language is set in **Settings > Language** and can also be auto-de
 | Email de confirmação do boletim não chega | Verifique sua caixa de spam. Sua assinatura permanece "Confirmação pendente" até você clicar no link do email. Cancele e assine novamente para reenviá-lo. |
 | O código para no IDE após 30 segundos | A execução no navegador tem um limite de 30 segundos por design. Baixe o trecho e execute localmente para trabalhos mais longos. |
 | Não consigo adicionar itens a um projeto compartilhado | Apenas proprietários e editores do projeto podem adicionar ou remover itens. Peça acesso de editor ao proprietário. |
+| O plugin QGIS do EpiDBot mostra "Unauthorized" | Sua chave de API está ausente ou é inválida. Clique no botão **⚙** no painel do plugin e cole uma chave válida criada na interface web (**Configurações > Chaves de API**). |
+| O plugin QGIS não consegue acessar o servidor | Verifique a **URL do Servidor** nas configurações do plugin (padrão: `https://api.epidbot.kwar-ai.com.br`) e sua configuração de rede/proxy. Falhas de rede transitórias são repetidas automaticamente. |
 
 ### Getting Help
 
@@ -1191,6 +1262,8 @@ If you encounter an issue not listed here:
 | **ECDC** | European Centre for Disease Prevention and Control |
 | **PAHO** | Pan American Health Organization |
 | **GADM** | Database of Global Administrative Areas — provides boundary shapefiles |
+| **QGIS** | Sistema de Informação Geográfica (SIG) livre e de código aberto. O plugin QGIS do EpiDBot permite conversar com o EpiDBot e mapear seus resultados dentro do QGIS |
+| **GeoJSON** | Formato baseado em JSON para codificar feições geográficas como pontos e polígonos; o plugin QGIS pode transformar respostas GeoJSON em camadas de mapa |
 | **PIX** | Brazilian instant payment system used for subscription payments |
 | **Voice Input** | Browser-based speech recognition for entering messages by voice |
 | **Lightbox** | Full-size image overlay for previewing plots at their natural resolution |

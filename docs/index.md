@@ -23,16 +23,17 @@ Version 2.8.0 | Kwar-AI
 11. [Projects](#projects)
 12. [Blipper — The Data Storytelling Feed](#blipper)
 13. [Malaria Atlas](#malaria-atlas)
-14. [Reports](#reports)
-15. [Sessions](#sessions)
-16. [Search](#search)
-17. [Knowledge Base](#knowledge-base)
-18. [Settings](#settings)
-19. [Subscription Plans & Feature Gating](#subscription-plans--feature-gating)
-20. [Tips & Best Practices](#tips--best-practices)
-21. [Supported Languages](#supported-languages)
-22. [Troubleshooting](#troubleshooting)
-23. [Glossary](#glossary)
+14. [EpiDBot QGIS Plugin](#epidbot-qgis-plugin)
+15. [Reports](#reports)
+16. [Sessions](#sessions)
+17. [Search](#search)
+18. [Knowledge Base](#knowledge-base)
+19. [Settings](#settings)
+20. [Subscription Plans & Feature Gating](#subscription-plans--feature-gating)
+21. [Tips & Best Practices](#tips--best-practices)
+22. [Supported Languages](#supported-languages)
+23. [Troubleshooting](#troubleshooting)
+24. [Glossary](#glossary)
 
 ---
 
@@ -53,6 +54,7 @@ EpiDBot is an AI assistant that helps you explore, analyze, and visualize public
 - **Search a knowledge base** of epidemiological documents and references, and explore each collection as a wiki with an interactive knowledge graph
 - **Organize your work into projects** — group related sessions, reports, figures, and datasets into shareable workspaces
 - **Write and run Python in your browser** with the built-in code editor — no installation required
+- **Chat with EpiDBot inside QGIS** — install the [QGIS plugin](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin) to ask questions from your GIS and load GeoJSON answers straight onto the map (see [EpiDBot QGIS Plugin](#epidbot-qgis-plugin))
 - **Answer clarifying questions** — when a request is ambiguous, EpiDBot pauses mid-analysis and asks you structured questions
 - **Stay up to date** with an optional weekly bilingual newsletter of public-health publications and data updates
 - **Remember your conversations** across sessions so you can pick up where you left off
@@ -629,6 +631,73 @@ EpiDBot includes dedicated tools for accessing the Malaria Atlas Project (MAP) d
 
 ---
 
+## EpiDBot QGIS Plugin
+
+The **EpiDBot QGIS plugin** brings the EpiDBot chat directly into [QGIS](https://qgis.org/), the free open-source geographic information system. Ask epidemiological questions, generate charts, and load geospatial results onto your map — all without leaving your GIS workflow.
+
+The plugin talks to your EpiDBot account over the same REST API as the web interface, so sessions, plots, and quotas stay in sync. It is developed open source at [github.com/Deeplearn-PeD/epidbot-qgis-plugin](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin) under the GPL-2.0-or-later license.
+
+### Requirements
+
+- **QGIS 3.28** or newer (Windows, macOS, or Linux)
+- A personal **EpiDBot API key** — create one in the EpiDBot web UI under **Settings > API Keys** (see [API Keys](#api-keys))
+- An internet connection to the EpiDBot server
+
+### Installing the Plugin
+
+1. Download the latest plugin ZIP: [epidbot.zip](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases/latest/download/epidbot.zip) — this link always points at the most recent release
+2. In QGIS, open **Plugins > Manage and Install Plugins > Install from ZIP**
+3. Select the downloaded file and click **Install Plugin**
+4. Open the **EpiDBot Chat** panel from the QGIS toolbar
+
+### Configuring the Plugin
+
+Click the **⚙ (gear) button** in the chat panel to open the settings:
+
+| Setting | Meaning |
+|---|---|
+| **Server URL** | EpiDBot API base URL — pre-filled with the default `https://api.epidbot.kwar-ai.com.br` |
+| **API key** | Your personal EpiDBot API key, sent as an `X-API-Key` header on every request. Stored in the system keyring when the optional `keyring` package is available |
+| **Answer language** | Language of the AI responses: `en` or `pt-BR` |
+| **Status poll interval** | Seconds between job-status polls (default 1.5 s) |
+
+### Chatting from QGIS
+
+The dockable **EpiDBot Chat** panel works like the web chat:
+
+- Type a question and press Enter — answers render with Markdown formatting, tables, and inline chart thumbnails
+- Pick an **existing session** from the session selector, start a **new one**, or let the server auto-create one; switching sessions reloads the history, including plots
+- **Export a conversation** to a Markdown file
+- The panel UI is available in **English and Brazilian Portuguese**, and chat requests run on a background thread so QGIS stays responsive while EpiDBot works
+
+### Map Integration
+
+This is where the plugin shines — EpiDBot understands your QGIS project and can feed results back onto the map:
+
+- **Map context injection** — every prompt automatically includes your active layers (with field names, sample values, and current selections), the canvas extent (EPSG:4326), and the project CRS, so EpiDBot knows what you are looking at
+- **Spatial prompts** — one-click toolbar actions let you ask about the **current map extent** or the **features you have selected**
+- **"Add to map"** — GeoJSON blocks and dataset URLs in answers become styled map layers on the canvas with a single click
+
+Example prompts:
+
+> Map the dengue incidence of the municipalities currently loaded in my project
+
+> What is the total population of the selected municipalities?
+
+### Working with Plots
+
+Every chart EpiDBot generates in the plugin offers three actions:
+
+- **Save to disk** — export the image file
+- **Open in image viewer**
+- **Embed in print layout** — add the plot to an *"EpidBot Plots"* print layout for map compositions
+
+### Coming Soon
+
+Planned features include a **dataset catalog browser** (browse EpiDBot datasets and load them directly as QGIS layers), document uploads from QGIS, and publication in the official QGIS plugin repository — keep an eye on the [releases page](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases).
+
+---
+
 ## Reports
 
 EpiDBot can generate comprehensive PDF and Markdown reports from your analyses, using built-in templates with distinct visual styles.
@@ -1176,6 +1245,8 @@ The interface language is set in **Settings > Language** and can also be auto-de
 | Newsletter confirmation email not arriving | Check your spam folder. Your subscription stays "Pending confirmation" until you click the link in the email. Unsubscribe and subscribe again to resend it. |
 | IDE code stops after 30 seconds | In-browser execution has a 30-second limit by design. Download the snippet and run it locally for longer jobs. |
 | Cannot add items to a shared project | Only project owners and editors can add or remove items. Ask the owner for editor access. |
+| EpiDBot QGIS plugin shows "Unauthorized" | Your API key is missing or invalid. Click the **⚙** button in the plugin panel and paste a valid key created in the web UI (**Settings > API Keys**). |
+| QGIS plugin cannot reach the server | Check the **Server URL** in the plugin settings (default: `https://api.epidbot.kwar-ai.com.br`) and your network/proxy configuration. Transient network failures are retried automatically. |
 
 ### Getting Help
 
@@ -1208,6 +1279,8 @@ If you encounter an issue not listed here:
 | **ECDC** | European Centre for Disease Prevention and Control |
 | **PAHO** | Pan American Health Organization |
 | **GADM** | Database of Global Administrative Areas — provides boundary shapefiles |
+| **QGIS** | A free, open-source Geographic Information System (GIS). The EpiDBot QGIS plugin lets you chat with EpiDBot and map its results inside QGIS |
+| **GeoJSON** | A JSON-based format for encoding geographic features such as points and polygons; the QGIS plugin can turn GeoJSON answers into map layers |
 | **PIX** | Brazilian instant payment system used for subscription payments |
 | **Voice Input** | Browser-based speech recognition for entering messages by voice |
 | **Lightbox** | Full-size image overlay for previewing plots at their natural resolution |
