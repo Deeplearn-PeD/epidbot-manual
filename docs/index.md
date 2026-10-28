@@ -643,7 +643,20 @@ The plugin talks to your EpiDBot account over the same REST API as the web inter
 - A personal **EpiDBot API key** — create one in the EpiDBot web UI under **Settings > API Keys** (see [API Keys](#api-keys))
 - An internet connection to the EpiDBot server
 
+The plugin is published in the **official QGIS plugin repository** as [EpidBot](https://plugins.qgis.org/plugins/epidbot/) (plugin ID `6764`).
+
 ### Installing the Plugin
+
+**From the official plugin repository (recommended):**
+
+1. In QGIS, open **Plugins > Manage and Install Plugins**
+2. Search for **EpidBot** — or open the [plugin page](https://plugins.qgis.org/plugins/epidbot/) in a browser
+3. Click **Install Plugin**
+4. Open the **EpiDBot Chat** panel from the QGIS toolbar (or **View > Panels**)
+
+Installed this way, the plugin is updated by the QGIS plugin manager itself.
+
+**From a ZIP package** — only when you need a version newer than the one already published:
 
 1. Download the latest plugin ZIP: [epidbot.zip](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases/latest/download/epidbot.zip) — this link always points at the most recent release
 2. In QGIS, open **Plugins > Manage and Install Plugins > Install from ZIP**
@@ -694,7 +707,7 @@ Every chart EpiDBot generates in the plugin offers three actions:
 
 ### Coming Soon
 
-Planned features include a **dataset catalog browser** (browse EpiDBot datasets and load them directly as QGIS layers), document uploads from QGIS, and publication in the official QGIS plugin repository — keep an eye on the [releases page](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases).
+Planned features include a **dataset catalog browser** (browse EpiDBot datasets and load them directly as QGIS layers) and document uploads from QGIS — keep an eye on the [releases page](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases).
 
 ---
 

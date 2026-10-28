@@ -643,7 +643,20 @@ O plugin conversa com sua conta EpiDBot pela mesma API REST da interface web, en
 - Uma **chave de API do EpiDBot** pessoal — crie uma na interface web do EpiDBot em **Configurações > Chaves de API** (consulte [Chaves de API](#chaves-de-api))
 - Conexão com a internet até o servidor do EpiDBot
 
+O plugin está publicado no **repositório oficial de plugins do QGIS** como [EpidBot](https://plugins.qgis.org/plugins/epidbot/) (ID `6764`).
+
 ### Instalando o Plugin
+
+**Pelo repositório oficial de plugins (recomendado):**
+
+1. No QGIS, abra **Complementos > Gerenciar e Instalar Complementos**
+2. Busque por **EpidBot** — ou abra a [página do plugin](https://plugins.qgis.org/plugins/epidbot/) no navegador
+3. Clique em **Instalar Complemento**
+4. Abra o painel **EpiDBot Chat** na barra de ferramentas do QGIS (ou em **Ver > Painéis**)
+
+Instalado assim, o plugin é atualizado pelo próprio gerenciador de complementos do QGIS.
+
+**A partir de um pacote ZIP** — apenas quando precisar de uma versão mais nova do que a já publicada:
 
 1. Baixe o ZIP mais recente do plugin: [epidbot.zip](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases/latest/download/epidbot.zip) — este link sempre aponta para a versão mais recente
 2. No QGIS, abra **Complementos > Gerenciar e Instalar Complementos > Instalar a partir de ZIP**
@@ -694,7 +707,7 @@ Cada gráfico gerado pelo plugin oferece três ações:
 
 ### Em Breve
 
-Recursos planejados incluem um **navegador do catálogo de conjuntos de dados** (navegue pelos dados do EpiDBot e carregue-os diretamente como camadas do QGIS), envio de documentos a partir do QGIS e publicação no repositório oficial de plugins do QGIS — fique de olho na [página de releases](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases).
+Recursos planejados incluem um **navegador do catálogo de conjuntos de dados** (navegue pelos dados do EpiDBot e carregue-os diretamente como camadas do QGIS) e envio de documentos a partir do QGIS — fique de olho na [página de releases](https://github.com/Deeplearn-PeD/epidbot-qgis-plugin/releases).
 
 ---
 
