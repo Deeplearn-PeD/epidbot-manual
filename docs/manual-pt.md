@@ -640,7 +640,7 @@ O plugin conversa com sua conta EpiDBot pela mesma API REST da interface web, en
 ### Requisitos
 
 - **QGIS 3.28** ou mais recente (Windows, macOS ou Linux)
-- Uma conta EpiDBot nos planos **Max ou Equipe** — as chaves de API estão incluídas nos dois
+- Uma conta EpiDBot em plano pago (**Pro, Max ou Equipe**) — as chaves de API estão incluídas em todos
 - Uma **chave de API do EpiDBot** pessoal — crie uma na interface web do EpiDBot em **Configurações > Chaves de API** (consulte [Chaves de API](#chaves-de-api))
 - Conexão com a internet até o servidor do EpiDBot
 
@@ -953,7 +953,7 @@ Provide your current password and a new password (minimum 8 characters). The new
 
 ### Chaves de API
 
-As chaves de API permitem acesso programático à API REST do EpiDBot. **Disponíveis nos planos Max e Equipe** — o Equipe herda todos os recursos do Max (consulte [Planos de Assinatura e Recursos por Plano](#planos-de-assinatura-e-recursos-por-plano)).
+As chaves de API permitem acesso programático à API REST do EpiDBot. **Disponíveis nos planos Pro, Max e Equipe** — todos os planos pagos incluem acesso à API (consulte [Planos de Assinatura e Recursos por Plano](#planos-de-assinatura-e-recursos-por-plano)).
 
 As chaves de API são também o que o [plugin QGIS do EpiDBot](#plugin-qgis-do-epidbot) usa para rodar o assistente dentro do QGIS.
 
@@ -1116,6 +1116,7 @@ Cada recurso abaixo exige o plano indicado **ou superior**. Qualquer recurso nã
 | **Feed de atividades** | Acompanhamento de atividades entre projetos |
 | **Proveniência de artefatos** | Verificação da origem e do histórico de processamento das análises |
 | **Tarefas de análise** | Atribuir análises como tarefas rastreáveis em projetos |
+| **Acesso via API** | Chaves de API para acessar a API REST do EpiDBot (as mesmas usadas pelo plugin QGIS) |
 
 #### Max (inclui tudo do Pro)
 
@@ -1131,7 +1132,6 @@ Cada recurso abaixo exige o plano indicado **ou superior**. Qualquer recurso nã
 | **Enriquecimento CRATE** | Enriquecer conjuntos de dados enviados com metadados CRATE |
 | **Consulta à wiki** | Fazer perguntas e receber respostas sintetizadas da wiki da base |
 | **Analisador/otimizador da base** | Ferramentas de análise e otimização da base de conhecimento |
-| **Chaves de API** | Acesso programático à API REST do EpiDBot |
 | **Agentes externos** | Registrar e consultar agentes de IA externos (ex.: nanobot) |
 | **Gráficos avançados** | Visualizações raster e geoespaciais (renderização GeoTIFF) |
 | **Escrita no Git** | Criar issues, comentar e abrir pull/merge requests |

@@ -640,7 +640,7 @@ The plugin talks to your EpiDBot account over the same REST API as the web inter
 ### Requirements
 
 - **QGIS 3.28** or newer (Windows, macOS, or Linux)
-- An EpiDBot account on the **Max or Team** plan — API keys are included in both
+- An EpiDBot account on a paid plan (**Pro, Max or Team**) — API keys are included in all of them
 - A personal **EpiDBot API key** — create one in the EpiDBot web UI under **Settings > API Keys** (see [API Keys](#api-keys))
 - An internet connection to the EpiDBot server
 
@@ -953,7 +953,7 @@ Provide your current password and a new password (minimum 8 characters). The new
 
 ### API Keys
 
-API keys allow programmatic access to EpiDBot's REST API. **Available on the Max and Team plans** — Team inherits every Max feature (see [Subscription Plans & Feature Gating](#subscription-plans--feature-gating)).
+API keys allow programmatic access to EpiDBot's REST API. **Available on the Pro, Max and Team plans** — every paid plan includes API access (see [Subscription Plans & Feature Gating](#subscription-plans--feature-gating)).
 
 API keys are also what the [EpiDBot QGIS plugin](#epidbot-qgis-plugin) uses to run the assistant inside QGIS.
 
@@ -1133,6 +1133,7 @@ Each feature below requires the listed plan **or higher**. Anything not listed �
 | **Activity feed** | Cross-project activity tracking |
 | **Artifact provenance** | Verify the origin and processing history of analyses |
 | **Analysis tasks** | Assign analyses as trackable tasks in projects |
+| **API keys** | Programmatic access to the EpiDBot REST API (the same keys the QGIS plugin uses) |
 
 #### Max (includes everything in Pro)
 
@@ -1148,7 +1149,6 @@ Each feature below requires the listed plan **or higher**. Anything not listed �
 | **CRATE enrichment** | Enrich uploaded datasets with CRATE metadata |
 | **Wiki query** | Ask questions and get synthesized answers from the KB wiki |
 | **KB analyzer / optimizer** | Knowledge base analysis and optimization tools |
-| **API keys** | Programmatic access to the EpiDBot REST API |
 | **External agents** | Register and consult external AI agents (e.g. nanobot) |
 | **Advanced plots** | Raster and geospatial visualizations (GeoTIFF rendering) |
 | **Git write access** | Create issues, comment, and open pull/merge requests |
