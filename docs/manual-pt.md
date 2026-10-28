@@ -640,6 +640,7 @@ O plugin conversa com sua conta EpiDBot pela mesma API REST da interface web, en
 ### Requisitos
 
 - **QGIS 3.28** ou mais recente (Windows, macOS ou Linux)
+- Uma conta EpiDBot nos planos **Max ou Equipe** — as chaves de API estão incluídas nos dois
 - Uma **chave de API do EpiDBot** pessoal — crie uma na interface web do EpiDBot em **Configurações > Chaves de API** (consulte [Chaves de API](#chaves-de-api))
 - Conexão com a internet até o servidor do EpiDBot
 
@@ -952,14 +953,16 @@ Provide your current password and a new password (minimum 8 characters). The new
 
 ### Chaves de API
 
-As chaves de API permitem acesso programático à API REST do EpiDBot. **Exige o plano Max** (consulte [Planos de Assinatura e Recursos por Plano](#planos-de-assinatura-e-recursos-por-plano)).
+As chaves de API permitem acesso programático à API REST do EpiDBot. **Disponíveis nos planos Max e Equipe** — o Equipe herda todos os recursos do Max (consulte [Planos de Assinatura e Recursos por Plano](#planos-de-assinatura-e-recursos-por-plano)).
+
+As chaves de API são também o que o [plugin QGIS do EpiDBot](#plugin-qgis-do-epidbot) usa para rodar o assistente dentro do QGIS.
 
 - **Criar uma chave**: Digite um nome e clique em criar. A chave é exibida apenas uma vez — copie-a imediatamente, pois não pode ser visualizada novamente.
 - **Gerenciar chaves**: Visualize as chaves existentes (mostrando nome e prefixo), exclua as que não precisa mais.
 
 ### Agentes Externos
 
-Agentes externos são assistentes de IA compatíveis com OpenClaw (como o [nanobot](https://github.com/HKUDS/nanobot)) executados fora do EpiDBot. Uma vez registrados, o EpiDBot pode **enviar mensagens a eles durante uma conversa** e repassar as respostas de volta para você. Este é o caminho inverso da [skill do EpiDBot](https://github.com/openclaw/clawhub) que permite que agentes externos consultem o EpiDBot — ele permite que o EpiDBot consulte *seus* agentes. **Exige o plano Max.**
+Agentes externos são assistentes de IA compatíveis com OpenClaw (como o [nanobot](https://github.com/HKUDS/nanobot)) executados fora do EpiDBot. Uma vez registrados, o EpiDBot pode **enviar mensagens a eles durante uma conversa** e repassar as respostas de volta para você. Este é o caminho inverso da [skill do EpiDBot](https://github.com/openclaw/clawhub) que permite que agentes externos consultem o EpiDBot — ele permite que o EpiDBot consulte *seus* agentes. **Exige o plano Max ou superior (Max ou Equipe).**
 
 #### Registrando um Agente
 

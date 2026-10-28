@@ -640,6 +640,7 @@ The plugin talks to your EpiDBot account over the same REST API as the web inter
 ### Requirements
 
 - **QGIS 3.28** or newer (Windows, macOS, or Linux)
+- An EpiDBot account on the **Max or Team** plan — API keys are included in both
 - A personal **EpiDBot API key** — create one in the EpiDBot web UI under **Settings > API Keys** (see [API Keys](#api-keys))
 - An internet connection to the EpiDBot server
 
@@ -952,14 +953,16 @@ Provide your current password and a new password (minimum 8 characters). The new
 
 ### API Keys
 
-API keys allow programmatic access to EpiDBot's REST API. **Requires the Max plan** (see [Subscription Plans & Feature Gating](#subscription-plans--feature-gating)).
+API keys allow programmatic access to EpiDBot's REST API. **Available on the Max and Team plans** — Team inherits every Max feature (see [Subscription Plans & Feature Gating](#subscription-plans--feature-gating)).
+
+API keys are also what the [EpiDBot QGIS plugin](#epidbot-qgis-plugin) uses to run the assistant inside QGIS.
 
 - **Create a key**: Enter a name and click create. The key is shown once — copy it immediately, as it cannot be viewed again.
 - **Manage keys**: View existing keys (showing name and prefix), delete keys you no longer need.
 
 ### External Agents
 
-External agents are OpenClaw-compatible AI assistants (such as [nanobot](https://github.com/HKUDS/nanobot)) running outside EpiDBot. Once registered, EpiDBot can **send messages to them during a conversation** and relay their responses back to you. This is the reverse of the [EpiDBot skill](https://github.com/openclaw/clawhub) that lets external agents query EpiDBot — it enables EpiDBot to consult *your* agents. **Requires the Max plan.**
+External agents are OpenClaw-compatible AI assistants (such as [nanobot](https://github.com/HKUDS/nanobot)) running outside EpiDBot. Once registered, EpiDBot can **send messages to them during a conversation** and relay their responses back to you. This is the reverse of the [EpiDBot skill](https://github.com/openclaw/clawhub) that lets external agents query EpiDBot — it enables EpiDBot to consult *your* agents. **Requires the Max plan or higher (Max or Team).**
 
 #### Registering an Agent
 
