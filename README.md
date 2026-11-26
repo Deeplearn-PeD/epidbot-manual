@@ -1,5 +1,10 @@
 # epidbot-manual
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24560456.svg)](https://doi.org/10.5281/zenodo.24560456)
+
+> 📖 **Cite this manual via its DOI:** [https://doi.org/10.5281/zenodo.24560456](https://doi.org/10.5281/zenodo.24560456)
+> The badge always reflects the DOI of the latest release, minted automatically by [Zenodo](https://zenodo.org) for every tagged version.
+
 Step-by-step user manual for [EpiDBot](https://github.com/Deeplearn-PeD/EpiDBot)
 — AI-powered public health data analytics.
 
