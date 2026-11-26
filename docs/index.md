@@ -4,7 +4,7 @@
 
 **AI-Powered Public Health Data Analytics**
 
-Version 2.8.0 | Kwar-AI
+Version 2.9.0 | Kwar-AI
 
 ---
 

@@ -4,7 +4,7 @@
 
 **Análise de Dados de Saúde Pública com Inteligência Artificial**
 
-Versão 2.8.0 | Kwar-AI
+Versão 2.9.0 | Kwar-AI
 
 ---
 
